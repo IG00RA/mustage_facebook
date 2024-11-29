@@ -62,15 +62,27 @@ interface ProgramItem {
 
 export const heroItems = [
   {
-    text: 'Hero.blockText.first',
+    text: {
+      first: 'Hero.blockText.first.first',
+      second: 'Hero.blockText.first.second',
+      third: 'Hero.blockText.first.third',
+    },
     img: 'icon-shuttle-hero',
   },
   {
-    text: 'Hero.blockText.second',
+    text: {
+      first: 'Hero.blockText.second.first',
+      second: 'Hero.blockText.second.second',
+      third: 'Hero.blockText.second.third',
+    },
     img: 'icon-management-hero',
   },
   {
-    text: 'Hero.blockText.third',
+    text: {
+      first: 'Hero.blockText.third.first',
+      second: 'Hero.blockText.third.second',
+      third: 'Hero.blockText.third.third',
+    },
     img: 'icon-budgeting-hero',
   },
 ];

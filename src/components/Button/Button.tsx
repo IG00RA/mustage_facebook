@@ -1,30 +1,19 @@
 import React from 'react';
 import styles from './Button.module.css';
+import { useTranslations } from 'next-intl';
+import Icon from '@/helpers/Icon';
 
-interface ButtonProps {
-  width?: string;
-  height?: string;
-  text: string;
-  link: string;
-  showArrow?: boolean;
-}
-
-const Button: React.FC<ButtonProps> = ({
-  width,
-  text,
-  link,
-  height,
-  showArrow = true,
-}) => {
+const Button = () => {
+  const t = useTranslations();
   return (
     <a
-      className={`${styles.button} ${!showArrow ? styles.noArrow : ''}`}
-      href={link}
+      className={`${styles.button}`}
+      href={t('Main.buttonLink')}
       target="_blank"
       rel="noopener noreferrer"
-      style={{ height, width }}
     >
-      {text}
+      {t('Main.button')}
+      <Icon name="icon-right-btn" width={24} height={24} />
     </a>
   );
 };

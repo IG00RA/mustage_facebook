@@ -23,6 +23,7 @@
 
 .burger_menu {
   width: var(--container);
+  margin: 0 auto;
   background-color: var(--second_text_color);
   padding: 32px 60px 0;
   display: flex;
