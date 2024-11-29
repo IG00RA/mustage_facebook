@@ -7,7 +7,7 @@ import Link from 'next/link';
 import { usePathname, useRouter } from 'next/navigation';
 import Button from '../Button/Button';
 import { menuItems, socialItems } from '@/data/data';
-import LanguageSwitcherFooter from '../LanguageSwitcherFooter/LanguageSwitcherFooter';
+import LanguageSwitcher from '../LanguageSwitcher/LanguageSwitcher';
 
 export default function Footer({ locale }: { locale: string }) {
   const t = useTranslations();
@@ -53,7 +53,7 @@ export default function Footer({ locale }: { locale: string }) {
           </div>
           <div className={styles.second_wrap}>
             <div className={styles.lang_wrap}>
-              <LanguageSwitcherFooter
+              <LanguageSwitcher
                 locale={locale}
                 handleLanguageChange={handleLanguageChange}
               />

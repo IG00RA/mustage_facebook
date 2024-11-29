@@ -513,8 +513,7 @@ export const answersItems = [
 ];
 
 export const menuItems = [
-  { label: 'Footer.menu.instruments', href: '#instruments' },
-  { label: 'Footer.menu.possibility', href: '#possibility' },
+  { label: 'Footer.menu.advantages', href: '#advantages' },
   { label: 'Footer.menu.about', href: '#about' },
   { label: 'Footer.menu.program', href: '#program' },
   { label: 'Footer.menu.feedback', href: '#feedback' },

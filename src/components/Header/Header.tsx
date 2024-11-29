@@ -38,53 +38,51 @@ export default function Header({ locale }: { locale: string }) {
     <header
       className={`${styles.header} ${isMenuOpen && styles.mobile_menu_open}`}
     >
-      <div className={styles.container}>
-        <Link className={styles.logo_wrap} href={`/${locale}/`}>
-          <Icon name="icon-logo" width={40} height={33} />
-          <span className={styles.logo_text}>{t('Header.home')}</span>
-        </Link>
+      <Link className={styles.logo_wrap} href={`/${locale}/`}>
+        <Icon name="icon-logo" width={40} height={33} />
+        <span className={styles.logo_text}>{t('Header.home')}</span>
+      </Link>
 
-        <nav className={styles.nav}>
-          <ul>
-            {menuItems.map((item, index) => (
-              <li key={index}>
-                <Link href={item.href}>{t(item.label)}</Link>
-              </li>
-            ))}
-          </ul>
-        </nav>
-        <div className={styles.button_wrap}>
-          <LanguageSwitcher
-            locale={locale}
-            handleLanguageChange={handleLanguageChange}
-          />
-          <Button
-            width="169px"
-            height="56px"
-            link={t('Main.buttonLink')}
-            text={t('Main.buttonFooter')}
-            showArrow={false}
-          />
-        </div>
-
-        <div
-          className={`${styles.burger_wrap} ${
-            isMenuOpen ? styles.burger_open : ''
-          }`}
-          onClick={isMenuOpen ? closeMenu : openMenu}
-        >
-          <span className={styles.line}></span>
-          <span className={styles.line}></span>
-          <span className={styles.line}></span>
-        </div>
-
-        <MobMenu
+      <nav className={styles.nav}>
+        <ul>
+          {menuItems.map((item, index) => (
+            <li key={index}>
+              <Link href={item.href}>{t(item.label)}</Link>
+            </li>
+          ))}
+        </ul>
+      </nav>
+      <div className={styles.button_wrap}>
+        <LanguageSwitcher
           locale={locale}
           handleLanguageChange={handleLanguageChange}
-          isMenuOpen={isMenuOpen}
-          closeMenu={closeMenu}
+        />
+        <Button
+          width="169px"
+          height="56px"
+          link={t('Main.buttonLink')}
+          text={t('Main.buttonFooter')}
+          showArrow={false}
         />
       </div>
+
+      <div
+        className={`${styles.burger_wrap} ${
+          isMenuOpen ? styles.burger_open : ''
+        }`}
+        onClick={isMenuOpen ? closeMenu : openMenu}
+      >
+        <span className={styles.line}></span>
+        <span className={styles.line}></span>
+        <span className={styles.line}></span>
+      </div>
+
+      <MobMenu
+        locale={locale}
+        handleLanguageChange={handleLanguageChange}
+        isMenuOpen={isMenuOpen}
+        closeMenu={closeMenu}
+      />
     </header>
   );
 }

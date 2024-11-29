@@ -20,6 +20,7 @@ const LanguageSwitcher: React.FC<LanguageSwitcherProps> = ({
       >
         RU
       </button>
+      <span>/</span>
       <button
         className={`${styles.button} ${
           locale === 'uk' ? styles.buttonActive : ''

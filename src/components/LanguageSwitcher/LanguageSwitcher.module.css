@@ -2,33 +2,20 @@
   display: inline-flex;
   gap: 4px;
   align-items: center;
-  border-radius: 24px;
-  padding: 8px;
-  background-color: #f5f5f5;
 
   & button {
-    background-color: transparent;
-    border-radius: 16px;
-    width: 48px;
-    height: 40px;
-    padding: 10px 11px;
-    text-align: center;
-    font-family: var(--font_mons);
+    color: #ADB7C2;
     font-size: var(--fs_xsmall);
     font-weight: 500;
-    line-height: 19.5px;
-    transition: background-color 0.3s ease;
+    line-height: 1.5;
+    transition: color 0.3s ease;
 
     &:hover {
-      background-color: #d9dbff;
-      font-weight: 600;
-      color: var(--second_color);
+      color: var(--foreground);
     }
   }
 
   & .buttonActive {
-    background-color: #d9dbff;
-    font-weight: 600;
-    color: var(--second_color);
+    color: var(--foreground);
   }
 }

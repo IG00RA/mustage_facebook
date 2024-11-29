@@ -32,6 +32,7 @@ export default function MobMenu({
         className={styles.burger_menu}
         onClick={event => event.stopPropagation()}
       >
+        <p>{t('Footer.menu.menu')}</p>
         <nav className={styles.nav}>
           <ul>
             {menuItems.map((item, index) => (
@@ -45,12 +46,6 @@ export default function MobMenu({
             ))}
           </ul>
         </nav>
-        <div className={styles.lang_wrap}>
-          <LanguageSwitcher
-            locale={locale}
-            handleLanguageChange={handleLanguageChange}
-          />
-        </div>
         <ul className={styles.social}>
           {socialItems.map((item, index) => (
             <li key={index}>
@@ -60,6 +55,13 @@ export default function MobMenu({
             </li>
           ))}
         </ul>
+
+        <div className={styles.lang_wrap}>
+          <LanguageSwitcher
+            locale={locale}
+            handleLanguageChange={handleLanguageChange}
+          />
+        </div>
 
         <div className={styles.button_wrap}>
           <Button

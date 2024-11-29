@@ -3,20 +3,14 @@
   top: 0;
   left: 50%;
   transform: translateX(-50%);
-  width: var(--container);
-  background-color: var(--foreground);
-  border-radius: 0 0 32px 32px;
-  padding: 16px;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   transition: all 500ms ease;
   z-index: 999;
-
-  &.mobile_menu_open {
-    border-radius: 0;
-    padding-bottom: 24px;
-  }
+  padding: 16px;
+  background-color: var(--second_text_color);
 
   @media (min-width: 768px) {
     width: 100%;
@@ -31,18 +25,6 @@
 
   @media (min-width: 1408px) {
     border-radius: 0 0 80px 80px;
-  }
-}
-
-.container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-
-  @media (min-width: 1408px) {
-    width: var(--desktop);
-    margin: 0 auto;
   }
 }
 
@@ -66,6 +48,7 @@
       }
 
       & li {
+
         & a:hover,
         & a:focus {
           background-color: var(--background);
@@ -75,9 +58,11 @@
       }
     }
   }
+
   @media (min-width: 1408px) {
     & ul {
       gap: 8px;
+
       & li a {
         border-radius: 16px;
         padding: 18px 24px;
@@ -97,8 +82,10 @@
       display: none;
     }
   }
+
   @media (min-width: 1200px) {
     gap: 34px;
+
     & a {
       display: flex;
       min-width: auto;
@@ -114,9 +101,7 @@
 
   &:hover,
   &:focus {
-    filter: drop-shadow(0px 2px 5px #1c16631a)
-      drop-shadow(0px 9px 20px #1c16631f) drop-shadow(0px 16px 20px #1c16630d)
-      drop-shadow(0px 37px 15px #1c166303) drop-shadow(0px 57px 16px #1c166300);
+    filter: drop-shadow(0px 2px 5px #1c16631a) drop-shadow(0px 9px 20px #1c16631f) drop-shadow(0px 16px 20px #1c16630d) drop-shadow(0px 37px 15px #1c166303) drop-shadow(0px 57px 16px #1c166300);
     transform: scale(1.05);
   }
 
@@ -129,8 +114,10 @@
 }
 
 .logo_text {
+  font-size: var(--fs_xsmall);
   font-weight: 600;
-  line-height: 19.5px;
+  line-height: 1.26;
+  color: var(--foreground);
 
   @media (min-width: 1024px) {
     font-size: var(--fs_large);
@@ -139,13 +126,13 @@
 }
 
 .burger_wrap {
-  width: 56px;
+  width: 40px;
   height: 40px;
   display: flex;
   justify-content: center;
+  border: 1px solid var(--main_color);
   align-items: center;
-  border-radius: 16px;
-  background-color: var(--background);
+  border-radius: 8px;
   position: relative;
   cursor: pointer;
 
@@ -156,9 +143,9 @@
 
 .line {
   display: block;
-  width: 18px;
-  height: 2px;
-  background-color: var(--second_color);
+  width: 16px;
+  height: 1.4px;
+  background-color: var(--main_color);
   border-radius: 1px;
   position: absolute;
   transition: all 0.5s ease-in-out;

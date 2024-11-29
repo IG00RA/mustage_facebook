@@ -1,41 +1,43 @@
 .mobile_wrap {
-  display: flex;
   position: absolute;
-  top: 80px;
+  top: 72px;
   left: 0;
   width: 100vw;
   height: 0;
-  transform: scaleY(0);
-  transform-origin: top;
+  transform: scaleX(0);
+  transform-origin: left;
   opacity: 0;
+  background-color: var(--second_text_color);
   transition: transform 500ms ease-in-out, opacity 500ms ease-in-out,
     height 500ms ease-in-out;
   z-index: -1;
 
-  @media (min-width: 768px) {
-    top: 85px;
-  }
 }
 
 .mobile_menu_open {
   height: 100vh;
-  transform: scaleY(1);
+  transform: scaleX(1);
   opacity: 1;
   z-index: 1000;
 }
 
 .burger_menu {
   width: var(--container);
-  height: 428px;
-  background-color: var(--foreground);
-  border-radius: 0 0 32px 32px;
-  border-top: 1px solid #d9dbff;
-  padding: 24px;
+  background-color: var(--second_text_color);
+  padding: 32px 60px 0;
   display: flex;
-  justify-content: center;
   align-items: center;
   gap: 24px;
   flex-direction: column;
+
+  & p {
+    font-size: var(--fs_xsmall);
+    font-weight: 600;
+    line-height: 1.26;
+    text-align: center;
+    color: var(--foreground);
+
+  }
 
   @media (min-width: 768px) {
     margin: 0 auto;
@@ -44,9 +46,10 @@
 
 .social {
   display: flex;
-  gap: 24px;
+  gap: 40px;
   align-items: center;
   height: 32px;
+  margin-bottom: 16px;
 
   & li {
     height: 32px;
@@ -55,14 +58,14 @@
       height: 32px;
 
       & svg {
-        fill: #858d9f;
+        fill: #ADB7C2;
         transition: fill 0.3s ease;
         width: 32px;
         height: 32px;
       }
 
       & svg:hover {
-        fill: var(--main_text_color);
+        fill: var(--foreground);
       }
     }
   }
@@ -75,14 +78,17 @@
 }
 
 .nav {
+  margin-bottom: 16px;
+
   & li {
-    margin-bottom: 11px;
+    margin-bottom: 16px;
+    display: flex;
+    justify-content: center;
 
     & a {
-      font-family: var(--font_mons);
       font-size: var(--fs_xsmall);
-      font-weight: 500;
-      line-height: 19.5px;
+      line-height: 1.26;
+      color: var(--foreground);
     }
 
     &:last-child {
