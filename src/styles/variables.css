@@ -2,13 +2,11 @@
   --font_mons: 'Montserrat', sans-serif;
   --font_wix: 'Wix Madefor Display', serif;
 
-  --background: #f5f6fa;
-  --foreground: #fff;
-  --main_color: #d95043;
-  --second_color: #575ff2;
-  --main_text_color: #212631;
-
-  --block_back: #ffe0de;
+  --background: #F2F4F7;
+  --foreground: #FAFAFA;
+  --main_color: #008AFF;
+  --main_text_color: #586270;
+  --second_text_color: #222D39;
 
   --fs_small: 14px;
   --fs_xsmall: 16px;
@@ -24,7 +22,7 @@
   --mobile_xl: 475px;
   --tablet: 768px;
   --laptop: 1024px;
-  --desktop: 1408px;
+  --desktop: 1328px;
 
   --container: 91.1%;
   --container_mob: 85%;

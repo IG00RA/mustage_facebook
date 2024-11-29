@@ -1,8 +1,8 @@
 import styles from './Hero.module.css';
-import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 import Button from '../Button/Button';
 import { heroItems } from '@/data/data';
+import Icon from '@/helpers/Icon';
 
 export default function Hero() {
   const t = useTranslations();
@@ -38,14 +38,7 @@ export default function Hero() {
       <ul className={styles.list}>
         {heroItems.map((item, index) => (
           <li key={index}>
-            <Image
-              src={item.img}
-              width={0}
-              height={0}
-              sizes="100vw"
-              alt="Advantages icon"
-              priority
-            />
+            <Icon name={item.img} width={32} height={32} />
             <p>{t(item.text)}</p>
           </li>
         ))}

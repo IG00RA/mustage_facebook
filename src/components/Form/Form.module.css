@@ -14,13 +14,13 @@
   background-color: var(--second_color);
   border-radius: 40px;
   padding: 24px;
-  background-image: url('../../img/form/lineMob.svg');
+  background-image: url('../../img/form/mail.webp');
   background-repeat: no-repeat;
   background-position: top 290px left -90px;
   background-size: 360px 58px;
 
   @media (min-width: 768px) {
-    background-image: url('../../img/form/line.svg');
+    background-image: url('../../img/form/mail.webp');
     background-repeat: no-repeat;
     background-position: bottom 24px left -28px;
     background-size: 671px 109px;
@@ -108,10 +108,7 @@
     transition: transform 0.3s ease, filter 0.3s ease;
 
     &:hover {
-      filter: drop-shadow(0px 2px 5px #1c16631a)
-        drop-shadow(0px 9px 20px #1c16631f) drop-shadow(0px 16px 20px #1c16630d)
-        drop-shadow(0px 37px 15px #1c166303)
-        drop-shadow(0px 57px 16px #1c166300);
+      filter: drop-shadow(0px 2px 5px #1c16631a) drop-shadow(0px 9px 20px #1c16631f) drop-shadow(0px 16px 20px #1c16630d) drop-shadow(0px 37px 15px #1c166303) drop-shadow(0px 57px 16px #1c166300);
       transform: scale(1.05);
     }
   }
@@ -129,6 +126,7 @@
 
   @media (min-width: 1024px) {
     margin-bottom: 0;
+
     & img {
       bottom: -130px;
       right: 12px;
@@ -139,6 +137,7 @@
 
   @media (min-width: 1340px) {
     margin-bottom: 0;
+
     & img {
       bottom: 0px;
     }
@@ -212,6 +211,7 @@
       }
     }
   }
+
   @media (min-width: 350px) {
     padding: 24px;
   }

@@ -1,31 +1,3 @@
-import game from '../img/hero/game.webp';
-import bar from '../img/hero/bar.webp';
-import laptop from '../img/hero/laptop.webp';
-
-import detect from '../img/instruments/detect.webp';
-import fb from '../img/instruments/fb.webp';
-import instrument from '../img/instruments/instrument.webp';
-import keitaro from '../img/instruments/keitaro.webp';
-import proxy from '../img/instruments/proxy.webp';
-import spy from '../img/instruments/spy.webp';
-
-import books from '../img/opportunities/books.webp';
-import chat from '../img/opportunities/chat.webp';
-import friends from '../img/opportunities/friends.webp';
-import live from '../img/opportunities/live.webp';
-import note from '../img/opportunities/note.webp';
-import time from '../img/opportunities/time.webp';
-
-import gambl from '../img/start/gambl.webp';
-import diamond from '../img/start/diamond.webp';
-
-import arbitr from '../img/study/arbitr.webp';
-import freelance from '../img/study/freelance.webp';
-import nub from '../img/study/nub.webp';
-import smm from '../img/study/smm.webp';
-import student from '../img/study/student.webp';
-import target from '../img/study/target.webp';
-
 import rev1 from '../img/feedback/rev1.webp';
 import rev2 from '../img/feedback/rev2.webp';
 import rev3 from '../img/feedback/rev3.webp';
@@ -35,6 +7,13 @@ import rev6 from '../img/feedback/rev6.webp';
 import rev7 from '../img/feedback/rev7.webp';
 import rev8 from '../img/feedback/rev8.webp';
 import rev9 from '../img/feedback/rev9.webp';
+
+import bells from '../img/study/bells.webp';
+import book from '../img/study/book.webp';
+import chat from '../img/study/chat.webp';
+import lamp from '../img/study/lamp.webp';
+import money from '../img/study/money.webp';
+import volume from '../img/study/volume.webp';
 
 interface ProgramItem {
   itemsHeader: string;
@@ -84,195 +63,48 @@ interface ProgramItem {
 export const heroItems = [
   {
     text: 'Hero.blockText.first',
-    img: game,
+    img: 'icon-shuttle-hero',
   },
   {
     text: 'Hero.blockText.second',
-    img: bar,
+    img: 'icon-management-hero',
   },
   {
     text: 'Hero.blockText.third',
-    img: laptop,
+    img: 'icon-budgeting-hero',
   },
-];
-
-export const instrumentsItems = [
-  {
-    text: {
-      first: 'Instruments.text.detect.first',
-      second: 'Instruments.text.detect.second',
-      third: 'Instruments.text.detect.third',
-      fourth: 'Instruments.text.detect.fourth',
-      fifth: 'Instruments.text.detect.fifth',
-      sixth: 'Instruments.text.detect.sixth',
-    },
-    img: detect,
-  },
-  {
-    text: {
-      first: 'Instruments.text.instrument.first',
-      second: 'Instruments.text.instrument.second',
-      third: 'Instruments.text.instrument.third',
-      fourth: 'Instruments.text.instrument.fourth',
-      fifth: 'Instruments.text.instrument.fifth',
-      sixth: 'Instruments.text.instrument.sixth',
-    },
-    img: instrument,
-  },
-  {
-    text: {
-      first: 'Instruments.text.proxy.first',
-      second: 'Instruments.text.proxy.second',
-      third: 'Instruments.text.proxy.third',
-      fourth: 'Instruments.text.proxy.fourth',
-      fifth: 'Instruments.text.proxy.fifth',
-      sixth: 'Instruments.text.proxy.sixth',
-    },
-    img: proxy,
-  },
-  {
-    text: {
-      first: 'Instruments.text.keitaro.first',
-      second: 'Instruments.text.keitaro.second',
-      third: 'Instruments.text.keitaro.third',
-      fourth: 'Instruments.text.keitaro.fourth',
-      fifth: 'Instruments.text.keitaro.fifth',
-      sixth: 'Instruments.text.keitaro.sixth',
-    },
-    img: keitaro,
-  },
-  {
-    text: {
-      first: 'Instruments.text.spy.first',
-      second: 'Instruments.text.spy.second',
-      third: 'Instruments.text.spy.third',
-      fourth: 'Instruments.text.spy.fourth',
-      fifth: 'Instruments.text.spy.fifth',
-      sixth: 'Instruments.text.spy.sixth',
-    },
-    img: spy,
-  },
-  {
-    text: {
-      first: 'Instruments.text.fb.first',
-      second: 'Instruments.text.fb.second',
-      third: 'Instruments.text.fb.third',
-      fourth: 'Instruments.text.fb.fourth',
-      fifth: 'Instruments.text.fb.fifth',
-      sixth: 'Instruments.text.fb.sixth',
-    },
-    img: fb,
-  },
-];
-
-export const workingItems = [
-  {
-    text: 'Working.blockText.first',
-    numb: '1.',
-  },
-  {
-    text: 'Working.blockText.second',
-    numb: '2.',
-  },
-  {
-    text: 'Working.blockText.third',
-    numb: '3.',
-  },
-  {
-    text: 'Working.blockText.fourth',
-    numb: '4.',
-  },
-  {
-    text: 'Working.blockText.fifth',
-    numb: '5.',
-  },
-  {
-    text: 'Working.blockText.sixth',
-    numb: '6.',
-  },
-];
-
-export const mustHaveItems = [
-  'MustHave.blockText.first',
-  'MustHave.blockText.second',
-  'MustHave.blockText.third',
-  'MustHave.blockText.fourth',
-  'MustHave.blockText.fifth',
-  'MustHave.blockText.sixth',
 ];
 
 export const opportunitiesItems = [
   {
     text: 'Opportunities.blockText.first',
     header: 'Opportunities.blockHeader.first',
-    logo: books,
+    logo: 'icon-control-panel-opportunities',
   },
   {
     text: 'Opportunities.blockText.second',
     header: 'Opportunities.blockHeader.second',
-    logo: chat,
+    logo: 'icon-transparent-opportunities',
   },
   {
     text: 'Opportunities.blockText.third',
     header: 'Opportunities.blockHeader.third',
-    logo: note,
+    logo: 'icon-bank-opportunities',
   },
   {
     text: 'Opportunities.blockText.fourth',
     header: 'Opportunities.blockHeader.fourth',
-    logo: time,
+    logo: 'icon-check-opportunities',
   },
   {
     text: 'Opportunities.blockText.fifth',
     header: 'Opportunities.blockHeader.fifth',
-    logo: live,
+    logo: 'icon-bar-chart-opportunities',
   },
   {
     text: 'Opportunities.blockText.sixth',
     header: 'Opportunities.blockHeader.sixth',
-    logo: friends,
-  },
-];
-
-export const consumablesItems = [
-  {
-    text: 'Consumables.items.first',
-    id: 'track',
-  },
-  {
-    text: 'Consumables.items.second',
-    id: 'acc',
-  },
-  {
-    text: 'Consumables.items.third',
-    id: 'browser',
-  },
-
-  {
-    text: 'Consumables.items.fourth',
-    id: 'proxy',
-  },
-  {
-    text: 'Consumables.items.fifth',
-    id: 'spy',
-  },
-];
-
-export const startItems = [
-  'Start.items.first',
-  'Start.items.second',
-  'Start.items.third',
-  'Start.items.fourth',
-];
-
-export const startInfo = [
-  {
-    text: 'Start.gamblText',
-    logo: gambl,
-  },
-  {
-    text: 'Start.infoText',
-    logo: diamond,
+    logo: 'icon-risk-opportunities',
   },
 ];
 
@@ -281,37 +113,37 @@ export const studyItems = [
     header: 'Study.itemsHeader.first',
     title: 'Study.itemsTitle.first',
     text: 'Study.itemsText.first',
-    logo: nub,
+    logo: money,
   },
   {
     header: 'Study.itemsHeader.second',
     title: 'Study.itemsTitle.second',
     text: 'Study.itemsText.second',
-    logo: arbitr,
+    logo: bells,
   },
   {
     header: 'Study.itemsHeader.third',
     title: 'Study.itemsTitle.third',
     text: 'Study.itemsText.third',
-    logo: target,
+    logo: chat,
   },
   {
     header: 'Study.itemsHeader.fourth',
     title: 'Study.itemsTitle.fourth',
     text: 'Study.itemsText.fourth',
-    logo: smm,
+    logo: volume,
   },
   {
     header: 'Study.itemsHeader.fifth',
     title: 'Study.itemsTitle.fifth',
     text: 'Study.itemsText.fifth',
-    logo: student,
+    logo: book,
   },
   {
     header: 'Study.itemsHeader.sixth',
     title: 'Study.itemsTitle.sixth',
     text: 'Study.itemsText.sixth',
-    logo: freelance,
+    logo: lamp,
   },
 ];
 

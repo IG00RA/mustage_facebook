@@ -11,13 +11,13 @@ main {
 }
 
 body {
-  background-color: var(--background);
+  background-color: var(--foreground);
   margin: 0;
-  font-family: var(--font_mons);
-  font-size: var(--fs_xsmall);
-  font-weight: 500;
+  font-family: var(--font_wix);
+  font-size: var(--fs_small);
+  font-weight: 400;
   color: var(--main_text_color);
-  line-height: 24px;
+  line-height: 1.5;
 }
 
 *,

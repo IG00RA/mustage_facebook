@@ -6,7 +6,7 @@ import { useTranslations } from 'next-intl';
 import Link from 'next/link';
 import { usePathname, useRouter } from 'next/navigation';
 import Button from '../Button/Button';
-import { menuItemsFooter, socialItems } from '@/data/data';
+import { menuItems, socialItems } from '@/data/data';
 import LanguageSwitcherFooter from '../LanguageSwitcherFooter/LanguageSwitcherFooter';
 
 export default function Footer({ locale }: { locale: string }) {
@@ -33,7 +33,7 @@ export default function Footer({ locale }: { locale: string }) {
               <p className={styles.menu}>{t('Footer.menu.menu')}</p>
               <nav className={styles.nav}>
                 <ul>
-                  {menuItemsFooter.map((item, index) => (
+                  {menuItems.map((item, index) => (
                     <li key={index}>
                       <Link href={item.href}>{t(item.label)}</Link>
                     </li>

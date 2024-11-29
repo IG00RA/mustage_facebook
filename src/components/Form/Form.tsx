@@ -4,7 +4,7 @@ import Icon from '@/helpers/Icon';
 import styles from './Form.module.css';
 import { useTranslations } from 'next-intl';
 import { ChangeEvent, FormEvent, useState } from 'react';
-import logoBack from '../../img/form/logo.webp';
+import logoBack from '../../img/form/mail.webp';
 import Image from 'next/image';
 
 export default function Form() {

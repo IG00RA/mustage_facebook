@@ -8,14 +8,14 @@ import { getMessages } from 'next-intl/server';
 
 const montserrat = Montserrat({
   subsets: ['latin'],
-  weight: ['300', '400', '500', '600', '700', '800'],
+  weight: ['500'],
   variable: '--font_mons',
   adjustFontFallback: false,
 });
 
 const wixMadeforDisplay = Wix_Madefor_Display({
   subsets: ['latin'],
-  weight: ['700', '800'],
+  weight: ['400', '500', '600', '700', '800'],
   variable: '--font_wix',
   adjustFontFallback: false,
 });
