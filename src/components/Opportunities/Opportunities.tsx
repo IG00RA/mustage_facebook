@@ -8,19 +8,28 @@ export default function Opportunities() {
 
   return (
     <section id="opportunities" className={styles.opportunities}>
-      <h1 className={styles.header}>{t('Opportunities.header')}</h1>
+      <div className={styles.container}>
+        <span className={styles.headerText}>
+          {t('Opportunities.headerText')}
+        </span>
+        <h1 className={styles.header}>{t('Opportunities.header')}</h1>
 
-      <ul className={styles.list}>
-        {opportunitiesItems.map((item, index) => (
-          <li key={index}>
-            <div className={styles.icon_wrap}>
-              <Icon name={item.logo} width={32} height={32} />
-            </div>
-            <h3>{t(item.header)}</h3>
-            <p>{t(item.text)}</p>
-          </li>
-        ))}
-      </ul>
+        <ul className={styles.list}>
+          {opportunitiesItems.map((item, index) => (
+            <li key={index}>
+              <div className={styles.icon_wrap}>
+                <Icon name={item.logo} width={32} height={32} />
+              </div>
+              <h3>{t(item.header)}</h3>
+              <p>
+                {t(item.text.first)}
+                <span>{t(item.text.second)}</span>
+                {t(item.text.third)}
+              </p>
+            </li>
+          ))}
+        </ul>
+      </div>
     </section>
   );
 }

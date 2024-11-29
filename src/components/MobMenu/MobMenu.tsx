@@ -64,13 +64,7 @@ export default function MobMenu({
         </div>
 
         <div className={styles.button_wrap}>
-          <Button
-            width="169px"
-            height="56px"
-            link={t('Main.buttonLink')}
-            text={t('Main.buttonFooter')}
-            showArrow={false}
-          />
+          <Button />
         </div>
       </div>
     </div>

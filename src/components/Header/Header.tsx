@@ -57,13 +57,7 @@ export default function Header({ locale }: { locale: string }) {
           locale={locale}
           handleLanguageChange={handleLanguageChange}
         />
-        <Button
-          width="169px"
-          height="56px"
-          link={t('Main.buttonLink')}
-          text={t('Main.buttonFooter')}
-          showArrow={false}
-        />
+        <Button />
       </div>
 
       <div

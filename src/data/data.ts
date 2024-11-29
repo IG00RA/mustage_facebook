@@ -89,32 +89,56 @@ export const heroItems = [
 
 export const opportunitiesItems = [
   {
-    text: 'Opportunities.blockText.first',
+    text: {
+      first: 'Opportunities.blockText.first.first',
+      second: 'Opportunities.blockText.first.second',
+      third: 'Opportunities.blockText.first.third',
+    },
     header: 'Opportunities.blockHeader.first',
     logo: 'icon-control-panel-opportunities',
   },
   {
-    text: 'Opportunities.blockText.second',
+    text: {
+      first: 'Opportunities.blockText.second.first',
+      second: 'Opportunities.blockText.second.second',
+      third: 'Opportunities.blockText.second.third',
+    },
     header: 'Opportunities.blockHeader.second',
     logo: 'icon-transparent-opportunities',
   },
   {
-    text: 'Opportunities.blockText.third',
+    text: {
+      first: 'Opportunities.blockText.third.first',
+      second: 'Opportunities.blockText.third.second',
+      third: 'Opportunities.blockText.third.third',
+    },
     header: 'Opportunities.blockHeader.third',
     logo: 'icon-bank-opportunities',
   },
   {
-    text: 'Opportunities.blockText.fourth',
+    text: {
+      first: 'Opportunities.blockText.fourth.first',
+      second: 'Opportunities.blockText.fourth.second',
+      third: 'Opportunities.blockText.fourth.third',
+    },
     header: 'Opportunities.blockHeader.fourth',
     logo: 'icon-check-opportunities',
   },
   {
-    text: 'Opportunities.blockText.fifth',
+    text: {
+      first: 'Opportunities.blockText.fifth.first',
+      second: 'Opportunities.blockText.fifth.second',
+      third: 'Opportunities.blockText.fifth.third',
+    },
     header: 'Opportunities.blockHeader.fifth',
     logo: 'icon-bar-chart-opportunities',
   },
   {
-    text: 'Opportunities.blockText.sixth',
+    text: {
+      first: 'Opportunities.blockText.sixth.first',
+      second: 'Opportunities.blockText.sixth.second',
+      third: 'Opportunities.blockText.sixth.third',
+    },
     header: 'Opportunities.blockHeader.sixth',
     logo: 'icon-risk-opportunities',
   },

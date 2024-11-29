@@ -1,7 +1,7 @@
 .opportunities {
-  width: var(--container);
-  margin: 0 auto;
-  padding-bottom: 80px;
+  width: 100%;
+  padding-bottom: 204px;
+  background: linear-gradient(155deg, var(--foreground) 92%, var(--background) 92%);
 
   @media (min-width: 1408px) {
     padding-bottom: 120px;
@@ -9,13 +9,27 @@
   }
 }
 
+.container {
+  width: var(--container);
+  margin: 0 auto;
+}
+
+.headerText {
+  text-transform: uppercase;
+  margin-bottom: 2px;
+  color: var(--main_color);
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.26;
+}
+
 .header {
-  font-family: var(--font_wix);
   font-size: var(--fs_xlarge);
-  font-weight: 700;
-  margin-bottom: 40px;
-  line-height: 40.32px;
-  text-align: right;
+  font-weight: 600;
+  line-height: 1.26;
+  color: var(--second_text_color);
+  margin-bottom: 48px;
+
 
   @media (min-width: 768px) {
     font-size: var(--fs_mxlarge);
@@ -36,10 +50,7 @@
 
 .list {
   & li {
-    border-radius: 40px;
-    background-color: var(--foreground);
-    margin-bottom: 16px;
-    padding: 24px;
+    margin-bottom: 32px;
     transition: filter 0.3s ease;
 
     &:hover {
@@ -50,42 +61,19 @@
       margin-bottom: 0;
     }
 
-    &:nth-child(2) .icon_wrap {
-      background-color: #d9dbff99;
-    }
-
-    &:nth-child(3) .icon_wrap {
-      background-color: #ffe3b999;
-    }
-
-    &:nth-child(4) .icon_wrap {
-      background-color: #f6cce799;
-    }
-
-    &:nth-child(5) .icon_wrap {
-      background-color: #ffe0de99;
-    }
-
-    &:nth-child(6) .icon_wrap {
-      background-color: #e9ebff99;
-    }
-
     & h3 {
       font-size: 22px;
       font-weight: 600;
-      line-height: 29.26px;
-      margin-bottom: 16px;
-    }
-
-    @media (min-width: 350px) {
-      & h3 {
-        font-size: var(--fs_large);
-      }
+      line-height: 1.2;
+      color: var(--second_text_color);
+      margin-bottom: 12px;
     }
 
     & p {
-      font-size: var(--fs_small);
-      line-height: 21px;
+      & span {
+        font-weight: 600;
+        color: var(--second_text_color);
+      }
     }
   }
 
@@ -125,19 +113,17 @@
 }
 
 .icon_wrap {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
+  width: 64px;
+  height: 64px;
+  border-radius: 8px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-shrink: 0;
-  background-color: #d8f2f299;
+  background-color: #EBF6FF;
   margin-bottom: 16px;
 
-  & img {
-    width: 32px;
-    height: 32px;
+  & svg {
     transition: transform 0.3s ease, filter 0.3s ease;
 
     &:hover {
@@ -147,7 +133,7 @@
   }
 
   @media (min-width: 768px) {
-    & img {
+    & svg {
       width: 40px;
       height: 40px;
     }
