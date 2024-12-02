@@ -6,6 +6,7 @@ import Hero from '@/components/Hero/Hero';
 import Program from '@/components/Program/Program';
 import Study from '@/components/Study/Study';
 import Result from '@/components/Result/Result';
+import Consumables from '@/components/Consumables/Consumables';
 
 export default function Home() {
   return (
@@ -13,7 +14,7 @@ export default function Home() {
       <Hero />
       <Opportunities />
       <Result />
-      <></>
+      <Consumables />
       <></>
       <Study />
       <Program />

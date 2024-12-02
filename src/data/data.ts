@@ -196,6 +196,14 @@ export const resultItems = [
   },
 ];
 
+export const consumablesItems = [
+  'Consumables.items.first',
+  'Consumables.items.second',
+  'Consumables.items.third',
+  'Consumables.items.fourth',
+  'Consumables.items.fifth',
+];
+
 export const studyItems = [
   {
     header: 'Study.itemsHeader.first',

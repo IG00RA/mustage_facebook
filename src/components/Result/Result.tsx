@@ -20,7 +20,7 @@ export default function Result() {
 
     const interval = setInterval(() => {
       setActiveIndex(prevIndex => (prevIndex + 1) % resultItems.length);
-    }, 5000);
+    }, 2500);
 
     return () => clearInterval(interval);
   }, [isAutoplayActive]);
@@ -41,42 +41,57 @@ export default function Result() {
             <li
               key={index}
               onClick={() => handleItemClick(index)}
-              onMouseEnter={() => setHoveredIndex(index)}
-              onMouseLeave={() => setHoveredIndex(null)}
-              onFocus={() => setHoveredIndex(index)}
-              onBlur={() => setHoveredIndex(null)}
               className={styles.item}
             >
               <div
+                onMouseEnter={() => setHoveredIndex(index)}
+                onMouseLeave={() => setHoveredIndex(null)}
+                onFocus={() => setHoveredIndex(index)}
+                onBlur={() => setHoveredIndex(null)}
                 className={`${styles.header_wrap} ${
                   activeIndex === index && styles.header_wrap_act
                 }`}
               >
                 <div className={styles.icon_wrap}>
-                  {activeIndex === index || hoveredIndex === index ? (
+                  <div
+                    className={`${styles.icon} ${
+                      activeIndex === index || hoveredIndex === index
+                        ? styles.icon_visible
+                        : styles.icon_hidden
+                    }`}
+                  >
                     <Icon name={item.iconHov} width={24} height={24} />
-                  ) : (
+                  </div>
+                  <div
+                    className={`${styles.icon} ${
+                      activeIndex === index || hoveredIndex === index
+                        ? styles.icon_hidden
+                        : styles.icon_visible
+                    }`}
+                  >
                     <Icon name={item.icon} width={24} height={24} />
-                  )}
+                  </div>
                 </div>
                 <h3>{t(item.header)}</h3>
               </div>
-              {activeIndex === index && (
-                <div className={styles.image_wrap}>
-                  <div className={styles.text_wrap}>
-                    <p>{t(item.text)}</p>
-                  </div>
-                  <Image
-                    src={item.logo}
-                    width={0}
-                    height={0}
-                    sizes="100vw"
-                    alt={t(item.header)}
-                    priority
-                  />
-                  <div className={styles.line}></div>
+              <div
+                className={`${styles.image_wrap} ${
+                  activeIndex === index ? styles.expanded : styles.collapsed
+                }`}
+              >
+                <div className={styles.text_wrap}>
+                  <p>{t(item.text)}</p>
                 </div>
-              )}
+                <Image
+                  src={item.logo}
+                  width={0}
+                  height={0}
+                  sizes="100vw"
+                  alt={t(item.header)}
+                  priority
+                />
+                <div className={styles.line}></div>
+              </div>
             </li>
           ))}
         </ul>
