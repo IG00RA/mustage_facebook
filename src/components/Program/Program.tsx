@@ -19,20 +19,17 @@ export default function Program() {
 
   return (
     <section id="program" className={styles.program}>
-      <h1 className={styles.header}>
-        {t('Program.header.first')} &nbsp;
-        <span> {t('Program.header.second')}</span> &nbsp;
-        {t('Program.header.third')}
-      </h1>
+      <span className={styles.headerText}>{t('Program.headerText')}</span>
+      <h1 className={styles.header}>{t('Program.header')}</h1>
 
       <ul className={styles.list}>
         {programItems.map((item, index) => (
           <li key={index}>
             <div className={styles.main_wrap}>
               <h3>{t(item.itemsHeader)}</h3>
+              <h4>{t(item.itemsText)}</h4>
               <div className={styles.block_wrap}>
                 <div>
-                  <Icon name="icon-video" width={16} height={16} />
                   <p>
                     <span> {t(item.time.first)}</span> {t(item.time.second)}
                     <span> {t(item.time.third)}</span>
@@ -40,32 +37,27 @@ export default function Program() {
                   </p>
                 </div>
                 <div>
-                  <Icon name="icon-dock" width={16} height={16} />
                   <p>
                     <span>{t(item.quests.first)}</span>
                     {t(item.quests.second)}
                   </p>
                 </div>
                 <div>
-                  <Icon name="icon-edit" width={16} height={16} />
                   <p>
                     <span>{t(item.tests.first)}</span>
                     {t(item.tests.second)}
                   </p>
                 </div>
               </div>
-              <div className={styles.button_wrap}>
-                <h4>{t(item.itemsText)}</h4>
-                <button
-                  type="button"
-                  className={
-                    openIndices.includes(index) ? `${styles.active}` : ''
-                  }
-                  onClick={() => toggleDropdown(index)}
-                >
-                  <Icon name="icon-angle-down" width={16} height={16} />
-                </button>
-              </div>
+              <button
+                type="button"
+                className={
+                  openIndices.includes(index) ? `${styles.active}` : ''
+                }
+                onClick={() => toggleDropdown(index)}
+              >
+                <Icon name="icon-right-btn" width={24} height={24} />
+              </button>
             </div>
             <ul
               className={`${styles.drop_box} ${
