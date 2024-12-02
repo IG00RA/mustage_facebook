@@ -204,6 +204,13 @@ export const consumablesItems = [
   'Consumables.items.fifth',
 ];
 
+export const teamItems = [
+  'Team.items.first',
+  'Team.items.second',
+  'Team.items.third',
+  'Team.items.fourth',
+];
+
 export const studyItems = [
   {
     header: 'Study.itemsHeader.first',

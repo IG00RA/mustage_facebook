@@ -1,0 +1,171 @@
+.team {
+  width: 100%;
+  padding-bottom: 60px;
+  padding-top: 60px;
+  background-color: var(--background);
+
+  @media (min-width: 1408px) {
+    padding-bottom: 120px;
+    max-width: var(--desktop);
+  }
+}
+
+.container {
+  width: var(--container);
+  margin: 0 auto;
+}
+
+.headerText {
+  text-transform: uppercase;
+  margin-bottom: 2px;
+  color: var(--main_color);
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.26;
+}
+
+.header {
+  font-size: var(--fs_xlarge);
+  font-weight: 600;
+  line-height: 1.26;
+  color: var(--second_text_color);
+  margin-bottom: 48px;
+
+  @media (min-width: 768px) {
+    font-size: var(--fs_mxlarge);
+    margin-bottom: 60px;
+    line-height: 1.25;
+    text-align: center;
+  }
+
+  @media (min-width: 1024px) {
+    font-size: var(--fs_xxlarge);
+    margin-bottom: 80px;
+  }
+
+  @media (min-width: 1408px) {
+    font-size: var(--fs_xxxlarge);
+  }
+}
+
+.top_text {
+  font-weight: 500;
+  color: var(--second_text_color);
+  margin-bottom: 24px;
+
+  & span {
+    font-weight: 700;
+  }
+}
+
+.list {
+  margin-bottom: 24px;
+
+  & li {
+    margin-bottom: 16px;
+    display: flex;
+    gap: 12px;
+
+    & .circle {
+      margin-top: 3px;
+      flex-shrink: 0;
+      width: 16px;
+      height: 16px;
+      background-color: #fff;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0px 4px 10px 0px #008aff33;
+
+      & > div {
+        width: 10px;
+        height: 10px;
+        background-color: var(--main_color);
+        border-radius: 50%;
+      }
+    }
+
+    & h3 {
+      font-size: var(--fs_small);
+      line-height: 1.5;
+      font-weight: 600;
+      color: var(--second_text_color);
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  @media (min-width: 768px) {
+  }
+}
+
+.par_wrap {
+  padding: 125px 24px 24px;
+  border-radius: 16px;
+  background-color: var(--foreground);
+  background-image: url('../../img/team/fire.webp');
+  background-size: 160px 115px;
+  background-repeat: no-repeat;
+  background-position: top right;
+  margin-bottom: 32px;
+
+  & p {
+    font-size: var(--fs_xsmall);
+    font-weight: 500;
+    color: var(--second_text_color);
+  }
+}
+
+.second_wrap {
+  padding: 197px 32px 32px;
+  background-image: url('../../img/team/back.webp'),
+    url('../../img/team/backBlock.webp');
+  background-size: 197px 197px, 100% 100%;
+  background-repeat: no-repeat;
+  background-position: top left, center center;
+  background-color: var(--main_color);
+  border-radius: 24px;
+  margin-bottom: 16px;
+}
+
+.block_text_first {
+  color: var(--foreground);
+  font-weight: 500;
+  margin-bottom: 16px;
+
+  & span {
+    font-weight: 700;
+  }
+}
+
+.block_text_second {
+  padding: 8px 16px;
+  background-color: #ebf6ffe5;
+  border: 1px solid #ebf6ff;
+  color: var(--main_color);
+  font-weight: 600;
+  margin-bottom: 16px;
+  line-height: 1.3;
+  border-radius: 8px;
+}
+
+.block_text_third {
+  color: var(--foreground);
+  font-weight: 500;
+}
+
+.bottom_wrap {
+  padding: 24px 32px;
+  border-radius: 24px;
+  background-color: var(--foreground);
+  border: 1px solid #008aff;
+
+  & p {
+    font-size: var(--fs_xsmall);
+    font-weight: 500;
+    color: var(--second_text_color);
+  }
+}

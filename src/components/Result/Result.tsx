@@ -12,7 +12,7 @@ export default function Result() {
   const t = useTranslations();
 
   const [activeIndex, setActiveIndex] = useState<number>(0);
-  const [isAutoplayActive, setIsAutoplayActive] = useState<boolean>(true);
+  const [isAutoplayActive, setIsAutoplayActive] = useState<boolean>(false);
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   useEffect(() => {
