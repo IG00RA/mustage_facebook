@@ -214,37 +214,31 @@ export const teamItems = [
 export const studyItems = [
   {
     header: 'Study.itemsHeader.first',
-    title: 'Study.itemsTitle.first',
     text: 'Study.itemsText.first',
     logo: money,
   },
   {
     header: 'Study.itemsHeader.second',
-    title: 'Study.itemsTitle.second',
     text: 'Study.itemsText.second',
     logo: bells,
   },
   {
     header: 'Study.itemsHeader.third',
-    title: 'Study.itemsTitle.third',
     text: 'Study.itemsText.third',
     logo: chat,
   },
   {
     header: 'Study.itemsHeader.fourth',
-    title: 'Study.itemsTitle.fourth',
     text: 'Study.itemsText.fourth',
     logo: volume,
   },
   {
     header: 'Study.itemsHeader.fifth',
-    title: 'Study.itemsTitle.fifth',
     text: 'Study.itemsText.fifth',
     logo: book,
   },
   {
     header: 'Study.itemsHeader.sixth',
-    title: 'Study.itemsTitle.sixth',
     text: 'Study.itemsText.sixth',
     logo: lamp,
   },

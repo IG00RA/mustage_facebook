@@ -8,28 +8,23 @@ export default function Study() {
 
   return (
     <section className={styles.study}>
-      <h1 className={styles.header}>
-        {t('Study.header.first')}{' '}
-        <span>
-          {t('Study.header.second')}
-          <br />
-        </span>
-        {t('Study.header.third')}
-      </h1>
+      <span className={styles.headerText}>{t('Team.headerText')}</span>
+      <h1 className={styles.header}>{t('Study.header')}</h1>
 
       <ul className={styles.list}>
         {studyItems.map((item, index) => (
           <li key={index}>
-            <Image
-              src={item.logo}
-              width={0}
-              height={0}
-              sizes="100vw"
-              alt="Info icon"
-              priority
-            />
+            <div className={styles.img_wrap}>
+              <Image
+                src={item.logo}
+                width={0}
+                height={0}
+                sizes="100vw"
+                alt="Info icon"
+                priority
+              />
+            </div>
             <h3>{t(item.header)}</h3>
-            <h4>{t(item.title)}</h4>
             <p>{t(item.text)}</p>
           </li>
         ))}

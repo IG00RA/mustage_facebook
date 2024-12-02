@@ -1,7 +1,8 @@
 .study {
   width: var(--container);
   margin: 0 auto;
-  padding-bottom: 80px;
+  padding-bottom: 96px;
+  padding-top: 96px;
 
   @media (min-width: 1408px) {
     padding-bottom: 120px;
@@ -9,31 +10,36 @@
   }
 }
 
-.header {
-  line-height: 35.2px;
-  font-family: var(--font_wix);
-  font-size: var(--fs_xlarge);
-  line-height: 35.2px;
-  text-align: right;
-  margin-bottom: 60px;
+.headerText {
+  text-transform: uppercase;
+  margin-bottom: 2px;
+  color: var(--main_color);
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.26;
+}
 
-  & span {
-    color: var(--main_color);
-  }
+.header {
+  font-size: var(--fs_xlarge);
+  font-weight: 600;
+  line-height: 1.26;
+  color: var(--second_text_color);
+  margin-bottom: 48px;
 
   @media (min-width: 768px) {
     font-size: var(--fs_mxlarge);
-    line-height: 1.1;
+    margin-bottom: 60px;
+    line-height: 1.25;
+    text-align: center;
   }
 
   @media (min-width: 1024px) {
     font-size: var(--fs_xxlarge);
+    margin-bottom: 80px;
   }
 
   @media (min-width: 1408px) {
     font-size: var(--fs_xxxlarge);
-    max-width: 1295px;
-    margin-left: auto;
   }
 }
 
@@ -43,35 +49,16 @@
     padding: 8px 24px 24px;
     margin-bottom: 16px;
     background-color: var(--foreground);
-    transition: filter 0.3s ease;
+    transition: all 0.3s ease;
 
-    &:hover {
-      filter: drop-shadow(0px 20px 40px #65709f26);
+    &:hover,
+    &:focus {
+      border-bottom: 6px solid #008aff;
+      box-shadow: 0px 12px 20px 0px #008aff33;
     }
 
     &:last-child {
       margin-bottom: 0;
-    }
-
-    &:nth-child(2) {
-      background-color: var(--second_color);
-      color: var(--background);
-    }
-
-    &:nth-child(3) {
-      background-color: #ffe0de;
-    }
-
-    &:nth-child(4) {
-      background-color: #f6cce7;
-    }
-
-    &:nth-child(5) {
-      background-color: #ffe3b9;
-    }
-
-    &:nth-child(6) {
-      background-color: #d8f2f2;
     }
   }
 
