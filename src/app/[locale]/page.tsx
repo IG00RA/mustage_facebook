@@ -5,13 +5,14 @@ import Form from '@/components/Form/Form';
 import Hero from '@/components/Hero/Hero';
 import Program from '@/components/Program/Program';
 import Study from '@/components/Study/Study';
+import Result from '@/components/Result/Result';
 
 export default function Home() {
   return (
     <>
       <Hero />
       <Opportunities />
-      <></>
+      <Result />
       <></>
       <></>
       <Study />

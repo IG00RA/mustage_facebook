@@ -15,6 +15,13 @@ import lamp from '../img/study/lamp.webp';
 import money from '../img/study/money.webp';
 import volume from '../img/study/volume.webp';
 
+import achiev from '../img/result/achiev.webp';
+import chatRes from '../img/result/chat.webp';
+import doc from '../img/result/doc.webp';
+import gym from '../img/result/gym.webp';
+import headset from '../img/result/headset.webp';
+import micro from '../img/result/micro.webp';
+
 interface ProgramItem {
   itemsHeader: string;
   time: {
@@ -141,6 +148,51 @@ export const opportunitiesItems = [
     },
     header: 'Opportunities.blockHeader.sixth',
     logo: 'icon-risk-opportunities',
+  },
+];
+
+export const resultItems = [
+  {
+    header: 'Result.itemsHeader.first',
+    text: 'Result.itemsText.first',
+    icon: 'icon-database-result',
+    iconHov: 'icon-database-hov-result',
+    logo: gym,
+  },
+  {
+    header: 'Result.itemsHeader.second',
+    text: 'Result.itemsText.second',
+    icon: 'icon-document-result',
+    iconHov: 'icon-document-hov-result',
+    logo: doc,
+  },
+  {
+    header: 'Result.itemsHeader.third',
+    text: 'Result.itemsText.third',
+    icon: 'icon-headset-result',
+    iconHov: 'icon-headset-hov-result',
+    logo: headset,
+  },
+  {
+    header: 'Result.itemsHeader.fourth',
+    text: 'Result.itemsText.fourth',
+    icon: 'icon-user-result',
+    iconHov: 'icon-user-hov-result',
+    logo: chatRes,
+  },
+  {
+    header: 'Result.itemsHeader.fifth',
+    text: 'Result.itemsText.fifth',
+    icon: 'icon-computer-result',
+    iconHov: 'icon-computer-hov-result',
+    logo: micro,
+  },
+  {
+    header: 'Result.itemsHeader.sixth',
+    text: 'Result.itemsText.sixth',
+    icon: 'icon-star-result',
+    iconHov: 'icon-star-hov-result',
+    logo: achiev,
   },
 ];
 

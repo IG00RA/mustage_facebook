@@ -59,12 +59,7 @@ export default function Footer({ locale }: { locale: string }) {
               />
             </div>
             <div className={styles.button_wrap}>
-              <Button
-                width="86%"
-                height="56px"
-                link={t('Main.buttonLink')}
-                text={t('Main.buttonFooter')}
-              />
+              <Button />
             </div>
           </div>
         </div>
