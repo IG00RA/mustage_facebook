@@ -559,7 +559,7 @@ export const programItems: ProgramItem[] = [
   },
 ];
 
-export const feedbackItems = [
+export const feedbackItems: string[] = [
   rev1,
   rev2,
   rev3,
@@ -569,7 +569,7 @@ export const feedbackItems = [
   rev7,
   rev8,
   rev9,
-];
+].map(image => image.src);
 
 export const answersItems = [
   {

@@ -13,7 +13,8 @@
     "next": "^15.0.1",
     "next-intl": "^3.25.0",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "swiper": "^11.1.15"
   },
   "devDependencies": {
     "@types/node": "^20",

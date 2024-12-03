@@ -2,11 +2,11 @@
   --font_mons: 'Montserrat', sans-serif;
   --font_wix: 'Wix Madefor Display', serif;
 
-  --background: #F2F4F7;
-  --foreground: #FAFAFA;
-  --main_color: #008AFF;
+  --background: #f2f4f7;
+  --foreground: #fafafa;
+  --main_color: #008aff;
   --main_text_color: #586270;
-  --second_text_color: #222D39;
+  --second_text_color: #222d39;
 
   --fs_small: 14px;
   --fs_xsmall: 16px;
@@ -26,4 +26,15 @@
 
   --container: 91.1%;
   --container_mob: 85%;
+
+  --swiper-pagination-color: #008aff;
+  --swiper-pagination-bullet-size: 12px;
+  --swiper-pagination-bullet-width: 12px;
+  --swiper-pagination-bullet-height: 12px;
+  --swiper-pagination-bullet-inactive-color: #fff;
+  --swiper-pagination-bullet-inactive-opacity: 1;
+  --swiper-pagination-bullet-opacity: 1;
+  --swiper-pagination-bullet-horizontal-gap: 6px;
+  --swiper-pagination-bullet-vertical-gap: 6px;
+  --swiper-pagination-bottom: -40px;
 }

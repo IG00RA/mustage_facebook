@@ -69,7 +69,7 @@ export default function Program() {
                   return (
                     <li key={key}>
                       <div>
-                        <Icon name="icon-check-cube" width={16} height={16} />
+                        <Icon name="icon-checkProg" width={16} height={16} />
                         <span>{t(value.first)}</span>
                       </div>
                       <p>{t(value.second)}</p>
