@@ -573,39 +573,24 @@ export const feedbackItems: string[] = [
 
 export const answersItems = [
   {
-    itemsId: '01.',
     itemsHeader: 'Answers.itemsHeader.first',
     itemsText: 'Answers.itemsText.first',
   },
   {
-    itemsId: '02.',
     itemsHeader: 'Answers.itemsHeader.second',
     itemsText: 'Answers.itemsText.second',
   },
   {
-    itemsId: '03.',
     itemsHeader: 'Answers.itemsHeader.third',
     itemsText: 'Answers.itemsText.third',
   },
   {
-    itemsId: '04.',
     itemsHeader: 'Answers.itemsHeader.fourth',
     itemsText: 'Answers.itemsText.fourth',
   },
   {
-    itemsId: '05.',
     itemsHeader: 'Answers.itemsHeader.fifth',
     itemsText: 'Answers.itemsText.fifth',
-  },
-  {
-    itemsId: '06.',
-    itemsHeader: 'Answers.itemsHeader.sixth',
-    itemsText: 'Answers.itemsText.sixth',
-  },
-  {
-    itemsId: '07.',
-    itemsHeader: 'Answers.itemsHeader.seventh',
-    itemsText: 'Answers.itemsText.seventh',
   },
 ];
 

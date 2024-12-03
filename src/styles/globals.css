@@ -66,7 +66,7 @@ img {
 }
 
 .swiper-pagination-bullet {
-  transition: background-color 0.3s ease, opacity 0.3s ease;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .swiper-pagination-bullet-active {
