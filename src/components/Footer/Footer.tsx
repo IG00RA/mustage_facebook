@@ -26,7 +26,7 @@ export default function Footer({ locale }: { locale: string }) {
         <div className={styles.wrap}>
           <div className={styles.menu_wrap}>
             <Link className={styles.logo_wrap} href={`/${locale}/`}>
-              <Icon name="icon-logo-dark" width={40} height={33} />
+              <Icon name="icon-logo-footer" width={40} height={33} />
               <span>{t('Header.home')}</span>
             </Link>
             <div className={styles.nav_wrap}>

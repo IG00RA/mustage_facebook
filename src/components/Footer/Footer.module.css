@@ -1,26 +1,28 @@
 .footer {
-  width: var(--container);
-  margin: 0 auto;
+  width: 100%;
+  padding-bottom: 96px;
+  padding-top: 160px;
+  background: linear-gradient(
+    165deg,
+    var(--foreground) 11%,
+    var(--second_text_color) 11%
+  );
 
-  @media (min-width: 1408px) {
-    width: 95%;
-    padding: 60px 32px;
-    background-color: var(--main_text_color);
-    border-radius: 80px;
+  @media (min-width: 768px) {
+    position: relative;
+    padding-top: 140px;
+  }
+
+  @media (min-width: 1024px) {
+    padding-top: 190px;
+    max-width: var(--desktop);
+    padding-bottom: 120px;
   }
 }
 
 .container {
-  width: 100%;
-  background-color: var(--main_text_color);
-  border-radius: 40px;
-  padding: 40px 24px;
-
-  @media (min-width: 1408px) {
-    padding: 0;
-    max-width: var(--desktop);
-    margin: 0 auto;
-  }
+  width: var(--container);
+  margin: 0 auto;
 }
 
 @media (min-width: 768px) {
@@ -64,9 +66,10 @@
   }
 
   & span {
-    color: var(--background);
+    color: var(--foreground);
     font-weight: 600;
-    line-height: 19.5px;
+    line-height: 1.26;
+    font-size: var(--fs_xsmall);
   }
 
   @media (min-width: 768px) {
@@ -87,8 +90,9 @@
 
 .menu {
   font-weight: 600;
-  line-height: 19.5px;
-  color: var(--background);
+  font-size: var(--fs_xsmall);
+  line-height: 1.26;
+  color: var(--foreground);
   margin-bottom: 24px;
 }
 
@@ -96,14 +100,14 @@
   margin-bottom: 40px;
 
   & li {
-    margin-bottom: 11px;
+    margin-bottom: 15px;
 
     & a {
       font-family: var(--font_mons);
       font-size: var(--fs_xsmall);
       font-weight: 400;
-      line-height: 19.5px;
-      color: var(--background);
+      line-height: 1.26;
+      color: var(--foreground);
     }
 
     &:last-child {
@@ -137,9 +141,9 @@
 
 .social {
   display: flex;
-  gap: 24px;
+  gap: 40px;
   align-items: center;
-  margin-bottom: 60px;
+  margin-bottom: 40px;
   height: 32px;
 
   & li {
@@ -149,14 +153,14 @@
       height: 32px;
 
       & svg {
-        fill: #858d9f;
+        fill: #adb7c2;
         transition: fill 0.3s ease;
         width: 32px;
         height: 32px;
       }
 
       & svg:hover {
-        fill: var(--background);
+        fill: #f5f6fa;
       }
     }
   }
@@ -167,23 +171,24 @@
 }
 
 .lang_wrap {
-  margin-bottom: 16px;
+  margin-bottom: 34px;
 }
 
 .policy_wrap {
   padding-top: 16px;
-  border-top: 1px solid #858d9f;
+  border-top: 1px solid #adb7c2;
 
   & a {
-    font-size: var(--fs_xsmall);
+    font-family: var(--font_mons);
     font-weight: 500;
-    line-height: 19.5px;
-    color: #858d9f;
+    line-height: 1.22;
+    font-size: var(--fs_xsmall);
+    color: #adb7c2;
 
     transition: color 0.3s ease;
 
     &:hover {
-      color: var(--background);
+      color: var(--foreground);
     }
   }
 
@@ -197,11 +202,6 @@
 
 .button_wrap {
   margin-bottom: 40px;
-
-  & a {
-    margin: 0;
-    max-width: 300px !important;
-  }
 
   @media (min-width: 768px) {
     margin-bottom: 0;
@@ -229,7 +229,7 @@
       }
 
       & svg:hover {
-        fill: var(--background);
+        fill: var(--foreground);
       }
     }
   }

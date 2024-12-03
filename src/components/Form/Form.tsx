@@ -4,8 +4,6 @@ import Icon from '@/helpers/Icon';
 import styles from './Form.module.css';
 import { useTranslations } from 'next-intl';
 import { ChangeEvent, FormEvent, useState } from 'react';
-import logoBack from '../../img/form/mail.webp';
-import Image from 'next/image';
 
 export default function Form() {
   const t = useTranslations();
@@ -76,20 +74,10 @@ export default function Form() {
       <div className={styles.container}>
         <div className={styles.wrap}>
           <div className={styles.top_wrap}>
-            <Icon name="icon-logoForm" width={48} height={39} />
+            <Icon name="icon-logo-form" width={58} height={48} />
             <p>{t('Form.headerText')}</p>
           </div>
-          <div className={styles.header_wrap}>
-            <h1 className={styles.header}>{t('Form.header')}</h1>
-            <Image
-              src={logoBack}
-              width={0}
-              height={0}
-              sizes="100vw"
-              alt="Form icon"
-              priority
-            />
-          </div>
+          <h1 className={styles.header}>{t('Form.header')}</h1>
         </div>
         <form className={styles.form_wrap} onSubmit={handleSubmit}>
           <label className={styles.label}>
@@ -109,7 +97,11 @@ export default function Form() {
           <label className={styles.label}>
             {t('Form.form.phone')}
             <div className={styles.phone_wrap}>
-              <div className={styles.phone_label}>
+              <div
+                className={`${styles.phone_label} ${
+                  errors.phone ? styles.error : ''
+                }`}
+              >
                 <span>+380</span>
               </div>
               <input
@@ -147,6 +139,7 @@ export default function Form() {
 
           <button className={styles.button} type="submit">
             {t('Form.form.button')}
+            <Icon name="icon-right-btn" width={24} height={24} />
           </button>
         </form>
       </div>
