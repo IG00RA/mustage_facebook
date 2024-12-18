@@ -1,8 +1,8 @@
 .study {
   width: var(--container);
   margin: 0 auto;
-  padding-bottom: 96px;
-  padding-top: 96px;
+  padding-bottom: 90px;
+  padding-top: 92px;
 
   @media (min-width: 1408px) {
     padding-bottom: 120px;

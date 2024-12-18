@@ -9,7 +9,7 @@ export default function Study() {
   return (
     <section className={styles.study}>
       <span className={styles.headerText}>{t('Study.headerText')}</span>
-      <h1 className={styles.header}>{t('Study.header')}</h1>
+      <h2 className={styles.header}>{t('Study.header')}</h2>
 
       <ul className={styles.list}>
         {studyItems.map((item, index) => (

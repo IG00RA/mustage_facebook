@@ -9,7 +9,7 @@ export default function Team() {
     <section id="team" className={styles.team}>
       <div className={styles.container}>
         <span className={styles.headerText}>{t('Team.headerText')}</span>
-        <h1 className={styles.header}>{t('Team.header')}</h1>
+        <h2 className={styles.header}>{t('Team.header')}</h2>
         <div className={styles.main_wrap}>
           <div className={styles.first_wrap}>
             <p className={styles.top_text}>

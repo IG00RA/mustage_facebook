@@ -160,7 +160,6 @@
 .bottom_wrap {
   padding: 24px 32px;
   border-radius: 24px;
-  background-color: var(--foreground);
   border: 1px solid #008aff;
 
   & p {

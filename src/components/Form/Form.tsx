@@ -25,8 +25,6 @@ export default function Form() {
   const handleChange = (e: ChangeEvent<HTMLInputElement>): void => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
-
-    // Reset error when user starts typing
     setErrors({ ...errors, [name]: '' });
   };
 
@@ -77,7 +75,7 @@ export default function Form() {
             <Icon name="icon-logo-form" width={58} height={48} />
             <p>{t('Form.headerText')}</p>
           </div>
-          <h1 className={styles.header}>{t('Form.header')}</h1>
+          <h2 className={styles.header}>{t('Form.header')}</h2>
         </div>
         <form className={styles.form_wrap} onSubmit={handleSubmit}>
           <label className={styles.label}>

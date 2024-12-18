@@ -20,7 +20,7 @@ export default function Program() {
   return (
     <section id="program" className={styles.program}>
       <span className={styles.headerText}>{t('Program.headerText')}</span>
-      <h1 className={styles.header}>{t('Program.header')}</h1>
+      <h2 className={styles.header}>{t('Program.header')}</h2>
 
       <ul className={styles.list}>
         {programItems.map((item, index) => (

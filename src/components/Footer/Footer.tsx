@@ -2,15 +2,16 @@
 
 import Icon from '@/helpers/Icon';
 import styles from './Footer.module.css';
-import { useTranslations } from 'next-intl';
+import { useTranslations, useLocale } from 'next-intl';
 import Link from 'next/link';
 import { usePathname, useRouter } from 'next/navigation';
 import Button from '../Button/Button';
 import { menuItems, socialItems } from '@/data/data';
 import LanguageSwitcher from '../LanguageSwitcher/LanguageSwitcher';
 
-export default function Footer({ locale }: { locale: string }) {
+export default function Footer() {
   const t = useTranslations();
+  const locale = useLocale();
 
   const pathname = usePathname();
   const router = useRouter();
@@ -21,7 +22,7 @@ export default function Footer({ locale }: { locale: string }) {
   };
 
   return (
-    <section className={styles.footer}>
+    <footer className={styles.footer}>
       <div className={styles.container}>
         <div className={styles.wrap}>
           <div className={styles.menu_wrap}>
@@ -79,6 +80,6 @@ export default function Footer({ locale }: { locale: string }) {
           </ul>
         </div>
       </div>
-    </section>
+    </footer>
   );
 }

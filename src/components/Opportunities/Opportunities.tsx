@@ -12,7 +12,7 @@ export default function Opportunities() {
         <span className={styles.headerText}>
           {t('Opportunities.headerText')}
         </span>
-        <h1 className={styles.header}>{t('Opportunities.header')}</h1>
+        <h2 className={styles.header}>{t('Opportunities.header')}</h2>
 
         <ul className={styles.list}>
           {opportunitiesItems.map((item, index) => (

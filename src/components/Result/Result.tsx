@@ -34,7 +34,7 @@ export default function Result() {
     <section id="result" className={styles.result}>
       <div className={styles.container}>
         <span className={styles.headerText}>{t('Result.headerText')}</span>
-        <h1 className={styles.header}>{t('Result.header')}</h1>
+        <h2 className={styles.header}>{t('Result.header')}</h2>
 
         <ul className={styles.list}>
           {resultItems.map((item, index) => (

@@ -32,7 +32,7 @@ export default function Feedback() {
     <section id="feedback" className={styles.feedback}>
       <div className={styles.container}>
         <span className={styles.headerText}>{t('Feedback.headerText')}</span>
-        <h1 className={styles.header}>{t('Feedback.header')}</h1>
+        <h2 className={styles.header}>{t('Feedback.header')}</h2>
         <Swiper
           navigation={{
             prevEl: `.${styles.prev}`,

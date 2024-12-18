@@ -9,7 +9,7 @@ export default function Consumables() {
   return (
     <section id="consumables" className={styles.consumables}>
       <span className={styles.headerText}>{t('Consumables.headerText')}</span>
-      <h1 className={styles.header}>{t('Consumables.header')}</h1>
+      <h2 className={styles.header}>{t('Consumables.header')}</h2>
       <div className={styles.back_wrap}>
         <div className={styles.back}></div>
         <div className={styles.box}></div>

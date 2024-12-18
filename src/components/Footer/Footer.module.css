@@ -1,11 +1,11 @@
 .footer {
   width: 100%;
   padding-bottom: 96px;
-  padding-top: 160px;
+  padding-top: 158px;
   background: linear-gradient(
     165deg,
-    var(--foreground) 11%,
-    var(--second_text_color) 11%
+    var(--foreground) 10%,
+    var(--second_text_color) 10%
   );
 
   @media (min-width: 768px) {

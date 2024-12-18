@@ -1,0 +1,258 @@
+.tariffs {
+  width: var(--container);
+  margin: 0 auto;
+  padding-bottom: 92px;
+
+  @media (min-width: 1408px) {
+    padding-bottom: 120px;
+    max-width: var(--desktop);
+  }
+}
+
+.headerText {
+  text-transform: uppercase;
+  margin-bottom: 2px;
+  color: var(--main_color);
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.26;
+}
+
+.header {
+  font-size: var(--fs_xlarge);
+  font-weight: 600;
+  line-height: 1.26;
+  color: var(--second_text_color);
+  margin-bottom: 48px;
+
+  @media (min-width: 768px) {
+    font-size: var(--fs_mxlarge);
+    margin-bottom: 60px;
+    line-height: 1.25;
+    text-align: center;
+  }
+
+  @media (min-width: 1024px) {
+    font-size: var(--fs_xxlarge);
+    margin-bottom: 80px;
+  }
+
+  @media (min-width: 1408px) {
+    font-size: var(--fs_xxxlarge);
+  }
+}
+
+.tariffsList {
+  margin-bottom: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  align-items: stretch;
+
+  @media (min-width: 1024px) {
+    gap: 15px;
+    margin-bottom: 60px;
+  }
+}
+
+.tariffsListItem {
+  max-width: var(--mobile_l);
+  margin: 0 auto;
+  border-radius: 24px;
+  background-color: #fff;
+  padding: 24px 24px 32px;
+  transition: filter 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0px 15px 30px 0px #d2d9e059;
+
+  &:hover {
+    /* filter: drop-shadow(0px 20px 40px #65709f26); */
+  }
+
+  @media (min-width: 768px) {
+    width: calc(100% / 2 - 20px);
+    border-radius: 40px;
+    padding: 32px;
+  }
+
+  @media (min-width: 1024px) {
+    max-width: var(--mobile_xl);
+    width: calc(100% / 2 - 8px);
+  }
+
+  @media (min-width: 1400px) {
+    width: calc(100% / 4 - 12px);
+  }
+}
+
+.tariffsListItemHeader {
+  font-size: var(--fs_xsmall);
+  font-weight: 600;
+  line-height: 1.1;
+  color: var(--main_color);
+  max-width: 100%;
+  white-space: normal;
+  display: inline-block;
+  background-color: #ebf6ff;
+  border-radius: 8px;
+  padding: 12px 24px;
+  margin-bottom: 16px;
+
+  @media (min-width: 1024px) {
+    font-size: var(--fs_large);
+    line-height: 26.4px;
+    padding: 16px 32px;
+    margin-bottom: 24px;
+  }
+}
+
+.tariffsListItemPrice {
+  display: block;
+  font-family: var(--font_wix);
+  font-size: var(--fs_xlarge);
+  color: var(--second_text_color);
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: 16px;
+
+  @media (min-width: 1024px) {
+    font-weight: 600;
+    line-height: 79.2px;
+    font-size: var(--fs_xxxlarge);
+    padding-bottom: 24px;
+    margin-bottom: 32px;
+  }
+}
+
+.button {
+  margin: 0 auto;
+  width: 100%;
+  height: 56px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  padding: 16px 32px;
+  cursor: pointer;
+  text-decoration: none;
+  border-radius: 8px;
+  background-color: var(--main_color);
+  color: var(--foreground);
+  font-size: var(--fs_xsmall);
+  font-weight: 600;
+  line-height: 1.26;
+  transition: all 0.3s ease;
+  margin-bottom: 24px;
+
+  & svg {
+    fill: var(--foreground);
+  }
+
+  &:hover,
+  &:focus {
+    box-shadow: 0px 15px 25px 0px #008aff33;
+  }
+}
+
+.tariffsSubList {
+  border-top: 1px solid #adb7c2;
+  padding-top: 24px;
+  flex-grow: 1;
+}
+
+.tariffsSubListItem {
+  display: flex;
+  gap: 13px;
+  margin-bottom: 12px;
+
+  @media (min-width: 768px) {
+    margin-bottom: 16px;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--main_color);
+  margin-top: 8px;
+  flex-shrink: 0;
+  box-shadow: 0px 4px 15px 0px #008aff33;
+}
+
+.tariffsSubListItemText {
+  font-weight: 500;
+  font-size: var(--fs_small);
+  color: var(--second_text_color);
+
+  @media (min-width: 1024px) {
+    font-size: var(--fs_xsmall);
+    line-height: 24px;
+  }
+}
+
+.tariffsBankWrap {
+  background-color: #ebf6ff;
+  border-radius: 16px;
+  border-left: 6px solid var(--main_color);
+  padding: 32px 24px 24px;
+
+  @media (min-width: 768px) {
+    border-radius: 24px;
+    padding: 24px 40px 24px 132px;
+    max-width: 816px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.tariffsBankText {
+  font-family: var(--font_mons);
+  font-size: var(--fs_xsmall);
+  font-weight: 700;
+  margin-bottom: 16px;
+  padding-bottom: 8px;
+  color: var(--main_color);
+  border-bottom: 1px solid var(--main_color);
+  text-align: center;
+  width: 246px;
+  margin-left: 8px;
+
+  @media (min-width: 1024px) {
+    font-size: var(--fs_medium);
+    line-height: 27px;
+  }
+}
+
+.tariffsBankList {
+  display: flex;
+  gap: 8px;
+
+  @media (min-width: 768px) {
+    gap: 16px;
+  }
+}
+
+.tariffsBankListItem {
+  transform: scale(1);
+  transition: transform 0.3s ease;
+
+  &:hover,
+  &:focus {
+    transform: scale(1.1);
+  }
+  @media (min-width: 768px) {
+    height: 56px;
+
+    & svg {
+      width: 56px;
+      height: 56px;
+    }
+  }
+}
