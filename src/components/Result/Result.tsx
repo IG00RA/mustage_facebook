@@ -72,7 +72,7 @@ export default function Result() {
                     <Icon name={item.icon} width={24} height={24} />
                   </div>
                 </div>
-                <h3>{t(item.header)}</h3>
+                <h3 className={styles.par_header}>{t(item.header)}</h3>
               </div>
               <div
                 className={`${styles.image_wrap} ${
@@ -80,7 +80,7 @@ export default function Result() {
                 }`}
               >
                 <div className={styles.text_wrap}>
-                  <p>{t(item.text)}</p>
+                  <p className={styles.image_par}>{t(item.text)}</p>
                 </div>
                 <Image
                   src={item.logo}
@@ -88,6 +88,7 @@ export default function Result() {
                   height={0}
                   sizes="100vw"
                   alt={t(item.header)}
+                  className={styles.image}
                   priority
                 />
                 <div className={styles.line}></div>
@@ -96,7 +97,7 @@ export default function Result() {
           ))}
         </ul>
         <div className={styles.par_wrap}>
-          <p>
+          <p className={styles.button_text}>
             {t('Result.parText.first')}
             <span>{t('Result.parText.second')}</span>
             {t('Result.parText.third')}
