@@ -65,9 +65,41 @@
   display: flex;
   flex-direction: column;
   box-shadow: 0px 15px 30px 0px #d2d9e059;
+  transition: box-shadow 0.3s ease, background-color 0.3s ease;
 
-  &:hover {
-    /* filter: drop-shadow(0px 20px 40px #65709f26); */
+  &:hover,
+  &:focus {
+    box-shadow: 0px 15px 30px 0px #008aff59;
+    background-color: var(--main_color);
+
+    & .tariffsListItemHeader {
+      color: var(--foreground);
+      background-color: #ebf6ff66;
+    }
+
+    & .tariffsListItemPrice {
+      color: var(--foreground);
+    }
+
+    & .button {
+      color: var(--main_color);
+      background-color: var(--foreground);
+      & svg {
+        fill: var(--main_color);
+      }
+    }
+
+    & .tariffsSubList {
+      border-color: #ebf6ff;
+    }
+
+    & .dot {
+      background-color: var(--foreground);
+    }
+
+    & .tariffsSubListItemText {
+      color: var(--foreground);
+    }
   }
 
   @media (min-width: 768px) {
@@ -98,6 +130,7 @@
   border-radius: 8px;
   padding: 12px 24px;
   margin-bottom: 16px;
+  transition: color 0.3s ease, background-color 0.3s ease;
 
   @media (min-width: 1024px) {
     font-size: var(--fs_large);
@@ -115,6 +148,7 @@
   font-weight: 700;
   line-height: 1.1;
   margin-bottom: 16px;
+  transition: color 0.3s ease;
 
   @media (min-width: 1024px) {
     font-weight: 600;
@@ -144,9 +178,11 @@
   line-height: 1.26;
   transition: all 0.3s ease;
   margin-bottom: 24px;
+  transition: color 0.3s ease, background-color 0.3s ease;
 
   & svg {
     fill: var(--foreground);
+    transition: color 0.3s ease, fill 0.3s ease;
   }
 
   &:hover,
@@ -159,6 +195,7 @@
   border-top: 1px solid #adb7c2;
   padding-top: 24px;
   flex-grow: 1;
+  transition: border-color 0.3s ease;
 }
 
 .tariffsSubListItem {
@@ -183,12 +220,14 @@
   margin-top: 8px;
   flex-shrink: 0;
   box-shadow: 0px 4px 15px 0px #008aff33;
+  transition: background-color 0.3s ease;
 }
 
 .tariffsSubListItemText {
   font-weight: 500;
   font-size: var(--fs_small);
   color: var(--second_text_color);
+  transition: color 0.3s ease;
 
   @media (min-width: 1024px) {
     font-size: var(--fs_xsmall);

@@ -10,22 +10,26 @@ export default function Hero() {
   return (
     <section className={styles.hero}>
       <div className={styles.container}>
-        <h1 className={styles.header}>{t('Hero.header')}</h1>
-        <p className={styles.text}>
-          {t('Hero.text.first')}
-          <span>{t('Hero.text.second')}</span>
-          {t('Hero.text.third')}
-        </p>
-        <div className={styles.button_wrap}>
-          <Button />
-          <p>{t('Hero.buttonText')}</p>
+        <div className={styles.main_wrap}>
+          <div className={styles.header_wrap}>
+            <h1 className={styles.header}>{t('Hero.header')}</h1>
+            <p className={styles.text}>
+              {t('Hero.text.first')}
+              <span>{t('Hero.text.second')}</span>
+              {t('Hero.text.third')}
+            </p>
+            <div className={styles.button_wrap}>
+              <Button />
+              <p>{t('Hero.buttonText')}</p>
+            </div>
+          </div>
+          <div className={styles.background}></div>
         </div>
-        <div className={styles.background}></div>
         <ul className={styles.list}>
           {heroItems.map((item, index) => (
             <li key={index}>
-              <Icon name={item.img} width={40} height={40} />
-              <p>
+              <Icon name={item.img} width={32} height={32} />
+              <p className={styles.list_text}>
                 {t(item.text.first)}
                 <span>{t(item.text.second)}</span>
                 {t(item.text.third)}

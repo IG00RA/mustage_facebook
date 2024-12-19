@@ -9,7 +9,7 @@ import MobMenu from '../MobMenu/MobMenu';
 import { useState } from 'react';
 import LanguageSwitcher from '../LanguageSwitcher/LanguageSwitcher';
 import { menuItems } from '@/data/data';
-import Button from '../Button/Button';
+import ButtonSec from '../Button/ButtonSec';
 
 export default function Header({ locale }: { locale: string }) {
   const pathname = usePathname();
@@ -42,24 +42,22 @@ export default function Header({ locale }: { locale: string }) {
         <Icon name="icon-logo" width={40} height={33} />
         <span className={styles.logo_text}>{t('Header.home')}</span>
       </Link>
-
-      <nav className={styles.nav}>
-        <ul>
-          {menuItems.map((item, index) => (
-            <li key={index}>
-              <Link href={item.href}>{t(item.label)}</Link>
-            </li>
-          ))}
-        </ul>
-      </nav>
-      <div className={styles.button_wrap}>
+      <div className={styles.main_wrap}>
+        <nav>
+          <ul className={styles.nav}>
+            {menuItems.map((item, index) => (
+              <li key={index}>
+                <Link href={item.href}>{t(item.label)}</Link>
+              </li>
+            ))}
+          </ul>
+        </nav>
         <LanguageSwitcher
           locale={locale}
           handleLanguageChange={handleLanguageChange}
         />
-        <Button />
+        <ButtonSec />
       </div>
-
       <div
         className={`${styles.burger_wrap} ${
           isMenuOpen ? styles.burger_open : ''

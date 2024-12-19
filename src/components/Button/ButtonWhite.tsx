@@ -6,15 +6,12 @@ import Icon from '@/helpers/Icon';
 const ButtonWhite = () => {
   const t = useTranslations();
   return (
-    <a
+    <button
       className={`${styles.button_white}`}
-      href={t('Main.buttonLink')}
-      target="_blank"
-      rel="noopener noreferrer"
     >
       {t('Main.buttonSecond')}
       <Icon name="icon-right-btn" width={24} height={24} />
-    </a>
+    </button>
   );
 };
 

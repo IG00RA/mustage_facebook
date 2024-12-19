@@ -27,14 +27,12 @@
 }
 
 .button_sec {
-  width: 208px;
-  height: 56px;
   border: 1px solid var(--main_color);
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 8px;
-  padding: 16px 32px;
+  padding: 8px 16px;
   cursor: pointer;
   text-decoration: none;
   border-radius: 8px;
@@ -44,9 +42,20 @@
   font-weight: 600;
   line-height: 1.26;
   transition: all 0.3s ease;
+  white-space: nowrap;
 
   & svg {
     fill: var(--main_color);
+  }
+
+  @media (min-width: 1024px) {
+    padding: 16px;
+  }
+
+  @media (min-width: 1328px) {
+    height: 56px;
+    padding: 16px 32px;
+    width: 208px;
   }
 }
 
