@@ -23,14 +23,14 @@ export default function Team() {
               {teamItems.map((item, index) => (
                 <li key={index}>
                   <div className={styles.circle}>
-                    <div></div>
+                    <span></span>
                   </div>
-                  <h3>{t(item)}</h3>
+                  <h3 className={styles.list_header}>{t(item)}</h3>
                 </li>
               ))}
             </ul>
             <div className={styles.par_wrap}>
-              <p>{t('Team.parText')}</p>
+              <p className={styles.par_text}>{t('Team.parText')}</p>
             </div>
           </div>
 
@@ -49,7 +49,7 @@ export default function Team() {
           </div>
         </div>
         <div className={styles.bottom_wrap}>
-          <p>{t('Team.blockPar')} </p>
+          <p className={styles.bottom_text}>{t('Team.blockPar')} </p>
         </div>
       </div>
     </section>
