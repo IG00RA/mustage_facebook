@@ -26,24 +26,24 @@ export default function Program() {
         {programItems.map((item, index) => (
           <li key={index}>
             <div className={styles.main_wrap}>
-              <h3>{t(item.itemsHeader)}</h3>
-              <h4>{t(item.itemsText)}</h4>
+              <h3 className={styles.item_header}>{t(item.itemsHeader)}</h3>
+              <h4 className={styles.item_text}>{t(item.itemsText)}</h4>
               <div className={styles.block_wrap}>
-                <div>
-                  <p>
+                <div className={styles.block_par_wrap}>
+                  <p className={styles.item_par}>
                     <span> {t(item.time.first)}</span> {t(item.time.second)}
                     <span> {t(item.time.third)}</span>
                     {t(item.time.fourth)}
                   </p>
                 </div>
-                <div>
-                  <p>
+                <div className={styles.block_par_wrap}>
+                  <p className={styles.item_par}>
                     <span>{t(item.quests.first)}</span>
                     {t(item.quests.second)}
                   </p>
                 </div>
-                <div>
-                  <p>
+                <div className={styles.block_par_wrap}>
+                  <p className={styles.item_par}>
                     <span>{t(item.tests.first)}</span>
                     {t(item.tests.second)}
                   </p>
@@ -51,12 +51,12 @@ export default function Program() {
               </div>
               <button
                 type="button"
-                className={
+                className={`${styles.button} ${
                   openIndices.includes(index) ? `${styles.active}` : ''
-                }
+                }`}
                 onClick={() => toggleDropdown(index)}
               >
-                <Icon name="icon-right-btn" width={24} height={24} />
+                <Icon name="icon-right-btn" width={34} height={34} />
               </button>
             </div>
             <ul
@@ -67,12 +67,14 @@ export default function Program() {
               {Object.entries(item.itemsBlock).map(([key, value]) => {
                 if (value) {
                   return (
-                    <li key={key}>
-                      <div>
+                    <li className={styles.drop_box_item} key={key}>
+                      <div className={styles.drop_box_item_wrap}>
                         <Icon name="icon-checkProg" width={16} height={16} />
                         <span>{t(value.first)}</span>
                       </div>
-                      <p>{t(value.second)}</p>
+                      <p className={styles.drop_box_item_text}>
+                        {t(value.second)}
+                      </p>
                     </li>
                   );
                 }

@@ -17,6 +17,7 @@ export default function Study() {
             <div className={styles.head_wrap}>
               <div className={styles.img_wrap}>
                 <Image
+                  className={styles.image}
                   src={item.logo}
                   width={0}
                   height={0}
@@ -25,9 +26,9 @@ export default function Study() {
                   priority
                 />
               </div>
-              <h3>{t(item.header)}</h3>
+              <h3 className={styles.item_header}>{t(item.header)}</h3>
             </div>
-            <p>{t(item.text)}</p>
+            <p className={styles.item_text}>{t(item.text)}</p>
           </li>
         ))}
       </ul>
