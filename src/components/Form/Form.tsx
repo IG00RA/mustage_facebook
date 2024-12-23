@@ -73,7 +73,7 @@ export default function Form() {
         <div className={styles.wrap}>
           <div className={styles.top_wrap}>
             <Icon name="icon-logo-form" width={58} height={48} />
-            <p>{t('Form.headerText')}</p>
+            <p className={styles.top_text}>{t('Form.headerText')}</p>
           </div>
           <h2 className={styles.header}>{t('Form.header')}</h2>
         </div>
@@ -89,7 +89,7 @@ export default function Form() {
               className={`${styles.input} ${errors.name ? styles.error : ''}`}
               required
             />
-            {errors.name && <p className={styles.errorText}>{errors.name}</p>}
+            {errors.name && <p className={styles.error_text}>{errors.name}</p>}
           </label>
 
           <label className={styles.label}>
@@ -114,7 +114,9 @@ export default function Form() {
                 required
               />
             </div>
-            {errors.phone && <p className={styles.errorText}>{errors.phone}</p>}
+            {errors.phone && (
+              <p className={styles.error_text}>{errors.phone}</p>
+            )}
           </label>
 
           <label className={styles.label}>
@@ -131,7 +133,7 @@ export default function Form() {
               required
             />
             {errors.nickname && (
-              <p className={styles.errorText}>{errors.nickname}</p>
+              <p className={styles.error_text}>{errors.nickname}</p>
             )}
           </label>
 

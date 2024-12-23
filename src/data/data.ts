@@ -592,6 +592,18 @@ export const answersItems = [
     itemsHeader: 'Answers.itemsHeader.fifth',
     itemsText: 'Answers.itemsText.fifth',
   },
+  {
+    itemsHeader: 'Answers.itemsHeader.sixth',
+    itemsText: 'Answers.itemsText.sixth',
+  },
+  {
+    itemsHeader: 'Answers.itemsHeader.seventh',
+    itemsText: 'Answers.itemsText.seventh',
+  },
+  {
+    itemsHeader: 'Answers.itemsHeader.eighth',
+    itemsText: 'Answers.itemsText.eighth',
+  },
 ];
 
 export const menuItems = [

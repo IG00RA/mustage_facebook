@@ -18,9 +18,9 @@ export default function Answers() {
               <div className={styles.ico_wrap}>
                 <Icon name="icon-star-ans" width={16} height={16} />
               </div>
-              <h3>{t(item.itemsHeader)}</h3>
+              <h3 className={styles.item_header}>{t(item.itemsHeader)}</h3>
             </div>
-            <p>{t(item.itemsText)}</p>
+            <p className={styles.item_text}>{t(item.itemsText)}</p>
           </li>
         ))}
       </ul>
