@@ -8,7 +8,7 @@ export default function Answers() {
 
   return (
     <section id="faq" className={styles.answers}>
-      <span className={styles.headerText}>{t('Answers.headerText')}</span>
+      <span className={styles.header_text}>{t('Answers.headerText')}</span>
       <h2 className={styles.header}>{t('Answers.header')}</h2>
 
       <ul className={styles.list}>

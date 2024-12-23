@@ -1,21 +1,39 @@
 .tariffs {
   width: var(--container);
   margin: 0 auto;
-  padding-bottom: 92px;
+  padding-bottom: 96px;
+
+  @media (min-width: 1024px) {
+    padding-bottom: 120px;
+  }
+
+  @media (min-width: 1328px) {
+    padding-bottom: 144px;
+  }
 
   @media (min-width: 1408px) {
-    padding-bottom: 120px;
     max-width: var(--desktop);
   }
 }
 
-.headerText {
+.header_text {
+  display: inline-block;
   text-transform: uppercase;
   margin-bottom: 2px;
   color: var(--main_color);
   font-size: 12px;
   font-weight: 500;
   line-height: 1.26;
+
+  @media (min-width: 768px) {
+    font-size: var(--fs_xsmall);
+    font-weight: 400;
+    margin-bottom: 8px;
+  }
+
+  @media (min-width: 1024px) {
+    font-size: var(--fs_medium);
+  }
 }
 
 .header {
@@ -28,21 +46,16 @@
   @media (min-width: 768px) {
     font-size: var(--fs_mxlarge);
     margin-bottom: 60px;
-    line-height: 1.25;
-    text-align: center;
+    max-width: 1050px;
   }
 
-  @media (min-width: 1024px) {
+  @media (min-width: 1328px) {
     font-size: var(--fs_xxlarge);
     margin-bottom: 80px;
   }
-
-  @media (min-width: 1408px) {
-    font-size: var(--fs_xxxlarge);
-  }
 }
 
-.tariffsList {
+.tariffs_list {
   margin-bottom: 40px;
   display: flex;
   flex-wrap: wrap;
@@ -50,12 +63,12 @@
   align-items: stretch;
 
   @media (min-width: 1024px) {
-    gap: 15px;
-    margin-bottom: 60px;
+    gap: 32px;
+    margin-bottom: 40px;
   }
 }
 
-.tariffsListItem {
+.tariffs_list_item {
   max-width: var(--mobile_l);
   margin: 0 auto;
   border-radius: 24px;
@@ -72,12 +85,12 @@
     box-shadow: 0px 15px 30px 0px #008aff59;
     background-color: var(--main_color);
 
-    & .tariffsListItemHeader {
+    & .tariffs_list_item_header {
       color: var(--foreground);
       background-color: #ebf6ff66;
     }
 
-    & .tariffsListItemPrice {
+    & .tariffs_list_item_price {
       color: var(--foreground);
     }
 
@@ -89,7 +102,7 @@
       }
     }
 
-    & .tariffsSubList {
+    & .tariffs_subList {
       border-color: #ebf6ff;
     }
 
@@ -97,28 +110,28 @@
       background-color: var(--foreground);
     }
 
-    & .tariffsSubListItemText {
+    & .tariffs_subList_item_text {
       color: var(--foreground);
     }
   }
 
   @media (min-width: 768px) {
     width: calc(100% / 2 - 20px);
-    border-radius: 40px;
-    padding: 32px;
+    border-radius: 24px;
+    padding: 32px 32px 48px;
   }
 
   @media (min-width: 1024px) {
     max-width: var(--mobile_xl);
-    width: calc(100% / 2 - 8px);
+    width: calc(100% / 2 - 16px);
   }
 
   @media (min-width: 1400px) {
-    width: calc(100% / 4 - 12px);
+    width: calc(100% / 4 - 24px);
   }
 }
 
-.tariffsListItemHeader {
+.tariffs_list_item_header {
   font-size: var(--fs_xsmall);
   font-weight: 600;
   line-height: 1.1;
@@ -133,14 +146,13 @@
   transition: color 0.3s ease, background-color 0.3s ease;
 
   @media (min-width: 1024px) {
-    font-size: var(--fs_large);
-    line-height: 26.4px;
-    padding: 16px 32px;
-    margin-bottom: 24px;
+    font-size: var(--fs_medium);
+    padding: 12px 24px;
+    margin-bottom: 16px;
   }
 }
 
-.tariffsListItemPrice {
+.tariffs_list_item_price {
   display: block;
   font-family: var(--font_wix);
   font-size: var(--fs_xlarge);
@@ -152,10 +164,7 @@
 
   @media (min-width: 1024px) {
     font-weight: 600;
-    line-height: 79.2px;
-    font-size: var(--fs_xxxlarge);
-    padding-bottom: 24px;
-    margin-bottom: 32px;
+    font-size: var(--fs_xxlarge);
   }
 }
 
@@ -178,7 +187,8 @@
   line-height: 1.26;
   transition: all 0.3s ease;
   margin-bottom: 24px;
-  transition: color 0.3s ease, background-color 0.3s ease;
+  transition: color 0.3s ease, background-color 0.3s ease, transform 0.3s ease;
+  transform: scale(1);
 
   & svg {
     fill: var(--foreground);
@@ -188,23 +198,33 @@
   &:hover,
   &:focus {
     box-shadow: 0px 15px 25px 0px #008aff33;
+    transform: scale(1.1);
+  }
+
+  @media (min-width: 768px) {
+    margin-bottom: 32px;
   }
 }
 
-.tariffsSubList {
+.tariffs_subList {
   border-top: 1px solid #adb7c2;
   padding-top: 24px;
   flex-grow: 1;
   transition: border-color 0.3s ease;
+
+  @media (min-width: 768px) {
+    padding-top: 32px;
+  }
 }
 
-.tariffsSubListItem {
+.tariffs_subList_item {
   display: flex;
   gap: 13px;
   margin-bottom: 12px;
 
   @media (min-width: 768px) {
     margin-bottom: 16px;
+    gap: 12px;
   }
 
   &:last-child {
@@ -221,9 +241,14 @@
   flex-shrink: 0;
   box-shadow: 0px 4px 15px 0px #008aff33;
   transition: background-color 0.3s ease;
+
+  @media (min-width: 768px) {
+    width: 12px;
+    height: 12px;
+  }
 }
 
-.tariffsSubListItemText {
+.tariffs_subList_item_text {
   font-weight: 500;
   font-size: var(--fs_small);
   color: var(--second_text_color);
@@ -231,27 +256,33 @@
 
   @media (min-width: 1024px) {
     font-size: var(--fs_xsmall);
-    line-height: 24px;
   }
 }
 
-.tariffsBankWrap {
+.tariffs_bank_wrap {
+  margin: 0 auto;
+  max-width: var(--mobile_l);
   background-color: #ebf6ff;
   border-radius: 16px;
   border-left: 6px solid var(--main_color);
-  padding: 32px 24px 24px;
+  padding: 32px 5px 24px;
+
+  @media (min-width: 350px) {
+    padding: 32px 24px 24px;
+  }
 
   @media (min-width: 768px) {
-    border-radius: 24px;
-    padding: 24px 40px 24px 132px;
-    max-width: 816px;
+    margin: 0;
+    border-radius: 16px;
+    padding: 16px 40px 16px 35px;
+    max-width: 780px;
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
 }
 
-.tariffsBankText {
+.tariffs_bank_text {
   font-family: var(--font_mons);
   font-size: var(--fs_xsmall);
   font-weight: 700;
@@ -265,11 +296,13 @@
 
   @media (min-width: 1024px) {
     font-size: var(--fs_medium);
-    line-height: 27px;
+    width: auto;
+    margin: 0;
+    letter-spacing: 0.3px;
   }
 }
 
-.tariffsBankList {
+.tariffs_bank_list {
   display: flex;
   gap: 8px;
 
@@ -278,7 +311,7 @@
   }
 }
 
-.tariffsBankListItem {
+.tariffs_bank_list_item {
   transform: scale(1);
   transition: transform 0.3s ease;
 
@@ -286,12 +319,12 @@
   &:focus {
     transform: scale(1.1);
   }
-  @media (min-width: 768px) {
-    height: 56px;
+  @media (min-width: 1024px) {
+    height: 64px;
 
     & svg {
-      width: 56px;
-      height: 56px;
+      width: 64px;
+      height: 64px;
     }
   }
 }

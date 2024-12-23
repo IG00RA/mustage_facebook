@@ -37,4 +37,13 @@
   --swiper-pagination-bullet-horizontal-gap: 6px;
   --swiper-pagination-bullet-vertical-gap: 6px;
   --swiper-pagination-bottom: -40px;
+
+  @media (min-width: 768px) {
+    --swiper-pagination-bullet-size: 16px;
+    --swiper-pagination-bullet-width: 16px;
+    --swiper-pagination-bullet-height: 16px;
+    --swiper-pagination-bottom: -83px;
+    --swiper-pagination-bullet-horizontal-gap: 8px;
+    --swiper-pagination-bullet-vertical-gap: 8px;
+  }
 }

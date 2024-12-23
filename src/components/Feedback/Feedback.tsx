@@ -31,7 +31,7 @@ export default function Feedback() {
   return (
     <section id="feedback" className={styles.feedback}>
       <div className={styles.container}>
-        <span className={styles.headerText}>{t('Feedback.headerText')}</span>
+        <span className={styles.header_text}>{t('Feedback.headerText')}</span>
         <h2 className={styles.header}>{t('Feedback.header')}</h2>
         <Swiper
           navigation={{
@@ -47,16 +47,14 @@ export default function Feedback() {
           className={styles.gallery_slider}
           modules={[Navigation, Pagination]}
           loop={true}
-          // breakpoints={{
-          //   768: {
-          //     spaceBetween: 20,
-          //     slidesPerView: 2,
-          //   },
-          //   0: {
-          //     spaceBetween: 10,
-          //     slidesPerView: 1,
-          //   },
-          // }}
+          breakpoints={{
+            768: {
+              slidesPerView: 2,
+            },
+            1024: {
+              slidesPerView: 3,
+            },
+          }}
         >
           {galleryImages.map((image, index) => (
             <SwiperSlide key={index} className={styles.gallery_item}>

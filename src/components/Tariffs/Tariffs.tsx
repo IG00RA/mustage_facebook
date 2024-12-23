@@ -9,26 +9,32 @@ export default function Tariffs() {
 
   return (
     <section id="tariffs" className={styles.tariffs}>
-      <span className={styles.headerText}>{t('Tariffs.text')}</span>
+      <span className={styles.header_text}>{t('Tariffs.text')}</span>
       <h2 className={styles.header}>{t('Tariffs.header')}</h2>
 
-      <ul className={styles.tariffsList}>
+      <ul className={styles.tariffs_list}>
         {tariffsItems.map((item, index) => (
-          <li key={index} className={styles.tariffsListItem}>
+          <li key={index} className={styles.tariffs_list_item}>
             <div className={styles.tariffsListItemHeaderWrap}>
-              <h3 className={styles.tariffsListItemHeader}>{t(item.header)}</h3>
+              <h3 className={styles.tariffs_list_item_header}>
+                {t(item.header)}
+              </h3>
             </div>
-            <span className={styles.tariffsListItemPrice}>{t(item.price)}</span>
+            <span className={styles.tariffs_list_item_price}>
+              {t(item.price)}
+            </span>
             <button className={styles.button} type="button">
               {t('Tariffs.button')}
               <Icon name="icon-right-btn" width={24} height={24} />
             </button>
-            <ul className={styles.tariffsSubList}>
+            <ul className={styles.tariffs_subList}>
               {Object.entries(item.list).map(([key, value]) =>
                 value ? (
-                  <li className={styles.tariffsSubListItem} key={key}>
+                  <li className={styles.tariffs_subList_item} key={key}>
                     <span className={styles.dot}></span>
-                    <p className={styles.tariffsSubListItemText}>{t(value)}</p>
+                    <p className={styles.tariffs_subList_item_text}>
+                      {t(value)}
+                    </p>
                   </li>
                 ) : null
               )}
@@ -36,14 +42,14 @@ export default function Tariffs() {
           </li>
         ))}
       </ul>
-      <div className={styles.tariffsBankWrap}>
-        <p className={styles.tariffsBankText}>
+      <div className={styles.tariffs_bank_wrap}>
+        <p className={styles.tariffs_bank_text}>
           {t('Tariffs.bank.first')}
           {t('Tariffs.bank.second')}
         </p>
-        <ul className={styles.tariffsBankList}>
+        <ul className={styles.tariffs_bank_list}>
           {tariffsBanks.map((item, index) => (
-            <li key={index} className={styles.tariffsBankListItem}>
+            <li key={index} className={styles.tariffs_bank_list_item}>
               <Icon name={item} width={48} height={48} />
             </li>
           ))}

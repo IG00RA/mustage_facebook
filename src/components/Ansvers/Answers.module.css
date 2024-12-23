@@ -10,7 +10,7 @@
   }
 }
 
-.headerText {
+.header_text {
   text-transform: uppercase;
   margin-bottom: 2px;
   color: var(--main_color);
