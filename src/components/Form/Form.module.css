@@ -24,6 +24,11 @@
     padding: 60px 80px;
     display: flex;
     gap: 40px;
+    background-image: url('../../img/form/mail.webp'),
+      url('../../img/form/back_desk.webp');
+    background-repeat: no-repeat;
+    background-position: top 151px right 0, center center;
+    background-size: 148px 148px, 100% 100%;
   }
 }
 
