@@ -73,9 +73,11 @@ export default function Form() {
         <div className={styles.wrap}>
           <div className={styles.top_wrap}>
             <Icon name="icon-logo-form" width={58} height={48} />
-            <p className={styles.top_text}>{t('Form.headerText')}</p>
+            <h2 className={styles.top_text}>{t('Form.headerText')}</h2>
           </div>
-          <h2 className={styles.header}>{t('Form.header')}</h2>
+          <h3 className={styles.header}>
+            {t('Form.header.first')} <br /> {t('Form.header.second')}
+          </h3>
         </div>
         <form className={styles.form_wrap} onSubmit={handleSubmit}>
           <label className={styles.label}>
