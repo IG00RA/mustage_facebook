@@ -172,6 +172,7 @@
 .burger_open .line:nth-child(1) {
   transform: rotate(45deg);
   top: 18px;
+  width: 22px;
 }
 
 .burger_open .line:nth-child(2) {
@@ -181,4 +182,5 @@
 .burger_open .line:nth-child(3) {
   transform: rotate(-45deg);
   top: 18px;
+  width: 22px;
 }

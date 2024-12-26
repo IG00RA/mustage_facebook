@@ -56,7 +56,7 @@ export default function Program() {
                 }`}
                 onClick={() => toggleDropdown(index)}
               >
-                <Icon name="icon-right-btn" width={34} height={34} />
+                <Icon name="icon-right-btn" width={38} height={38} />
               </button>
             </div>
             <ul

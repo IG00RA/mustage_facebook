@@ -38,11 +38,15 @@
 }
 
 .header {
-  font-size: var(--fs_xlarge);
+  font-size: 28px;
   font-weight: 600;
   line-height: 1.26;
   color: var(--second_text_color);
   margin-bottom: 48px;
+
+  @media (min-width: 350px) {
+    font-size: var(--fs_xlarge);
+  }
 
   @media (min-width: 768px) {
     font-size: var(--fs_mxlarge);
@@ -170,5 +174,8 @@
 }
 
 .item_text {
-  font-size: var(--fs_xsmall);
+  font-size: var(--fs_small);
+  @media (min-width: 1024px) {
+    font-size: var(--fs_xsmall);
+  }
 }

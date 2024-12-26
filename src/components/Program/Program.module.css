@@ -1,7 +1,7 @@
 .program {
   width: var(--container);
   margin: 0 auto;
-  padding-bottom: 96px;
+  padding-bottom: 91px;
 
   @media (min-width: 1024px) {
     padding-bottom: 120px;
@@ -103,13 +103,14 @@
 
   @media (min-width: 1024px) {
     margin-bottom: 0;
+    font-size: 24px;
   }
 }
 
 .button {
   position: absolute;
-  bottom: 0;
-  right: 0;
+  bottom: -8px;
+  right: -8px;
   transform: scale(1);
   transition: transform 0.3s ease;
 
@@ -175,6 +176,7 @@
 
   & > :nth-child(2) {
     margin-bottom: 0;
+    margin-right: 6px;
   }
 
   & > :nth-child(3) {
@@ -184,6 +186,10 @@
 
   @media (min-width: 768px) {
     max-width: 310px;
+
+    & > :nth-child(2) {
+      margin-right: 0px;
+    }
   }
 
   @media (min-width: 1024px) {
@@ -201,9 +207,13 @@
 .block_par_wrap {
   background-color: #ebf6ff;
   border-radius: 8px;
-  padding: 8px 12px;
+  padding: 8px;
   display: inline-flex;
   margin-bottom: 6px;
+
+  @media (min-width: 350px) {
+    padding: 8px 12px;
+  }
 
   @media (min-width: 1024px) {
     border-radius: 8px;
@@ -217,6 +227,7 @@
   font-weight: 500;
   line-height: 1.26;
   color: var(--main_color);
+
   @media (min-width: 345px) {
     font-size: var(--fs_small);
   }
@@ -283,8 +294,12 @@
 
 .drop_box_item_text {
   color: #000;
-  font-size: var(--fs_xsmall);
+  font-size: var(--fs_small);
   line-height: 1.5;
+
+  @media (min-width: 350px) {
+    font-size: var(--fs_xsmall);
+  }
 
   @media (min-width: 768px) {
     font-size: var(--fs_medium);
