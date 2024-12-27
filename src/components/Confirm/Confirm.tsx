@@ -38,17 +38,18 @@ export default function Confirm({ locale }: { locale: string }) {
 
   return (
     <section className={styles.confirm}>
-      <Link className={styles.logo_wrap} href={`/${locale}/`}>
-        <Icon name="icon-logo" width={58} height={48} />
-        <span className={styles.logo_text}>{t('Confirm.logo')}</span>
-      </Link>
-      <h2 className={styles.header}>{t('Confirm.header')}</h2>
-      <p className={styles.text}>{t('Confirm.text')}</p>
-      <div className={styles.button_wrap}>
-        <Link href={`/${locale}/`}>{t('Confirm.button')}</Link>
+      <div className={styles.container}>
+        <Link className={styles.logo_wrap} href={`/${locale}/`}>
+          <Icon name="icon-logo" width={58} height={48} />
+          <span className={styles.logo_text}>{t('Confirm.logo')}</span>
+        </Link>
+        <h2 className={styles.header}>{t('Confirm.header')}</h2>
+        <p className={styles.text}>{t('Confirm.text')}</p>
+        <Link className={styles.button} href={`/${locale}/`}>
+          {t('Confirm.button')}
+          <Icon name="icon-right-btn" width={24} height={24} />
+        </Link>
       </div>
-
-      <div className={styles.background}></div>
     </section>
   );
 }

@@ -96,7 +96,7 @@
 .form_wrap {
   background-color: var(--foreground);
   border-radius: 16px;
-  padding: 24px;
+  padding: 24px 12px;
   display: flex;
   flex-direction: column;
   gap: 16px;
