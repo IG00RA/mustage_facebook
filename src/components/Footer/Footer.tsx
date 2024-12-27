@@ -8,17 +8,26 @@ import { usePathname, useRouter } from 'next/navigation';
 import Button from '../Button/Button';
 import { menuItems, socialItems } from '@/data/data';
 import LanguageSwitcher from '../LanguageSwitcher/LanguageSwitcher';
+import { useEffect, useState } from 'react';
 
 export default function Footer() {
   const t = useTranslations();
   const locale = useLocale();
+  const CHAT_URL = process.env.NEXT_PUBLIC_CHAT_URL || '';
+  const [query, setQuery] = useState<URLSearchParams | null>(null);
 
   const pathname = usePathname();
   const router = useRouter();
 
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const urlSearchParams = new URLSearchParams(window.location.search);
+      setQuery(urlSearchParams);
+    }
+  }, []);
   const handleLanguageChange = (lang: string) => {
     const path = pathname.split('/').slice(2).join('/');
-    router.push(`/${lang}/${path}`);
+    router.push(`/${lang}/${path}?${query}`);
   };
 
   return (
@@ -26,7 +35,7 @@ export default function Footer() {
       <div className={styles.container}>
         <div className={styles.wrap}>
           <div className={styles.menu_wrap}>
-            <Link className={styles.logo_wrap} href={`/${locale}/`}>
+            <Link className={styles.logo_wrap} href={`/${locale}/?${query}`}>
               <Icon name="icon-logo-footer" width={40} height={33} />
               <span>{t('Header.home')}</span>
             </Link>
@@ -60,7 +69,7 @@ export default function Footer() {
               />
             </div>
             <div className={styles.button_wrap}>
-              <Button />
+              <Button link={CHAT_URL} />
             </div>
           </div>
         </div>

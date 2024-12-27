@@ -10,9 +10,10 @@ import ButtonWhite from '../Button/ButtonWhite';
 
 export default function Result() {
   const t = useTranslations();
+  const BOT_URL = process.env.NEXT_PUBLIC_BOT_URL || '';
 
   const [activeIndex, setActiveIndex] = useState<number>(0);
-  const [isAutoplayActive, setIsAutoplayActive] = useState<boolean>(false);
+  const [isAutoplayActive, setIsAutoplayActive] = useState<boolean>(true);
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   useEffect(() => {
@@ -102,7 +103,7 @@ export default function Result() {
             <span>{t('Result.parText.second')}</span>
             {t('Result.parText.third')}
           </p>
-          <ButtonWhite />
+          <ButtonWhite link={BOT_URL} />
         </div>
       </div>
     </section>

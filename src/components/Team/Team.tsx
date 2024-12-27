@@ -6,7 +6,7 @@ export default function Team() {
   const t = useTranslations();
 
   return (
-    <section id="team" className={styles.team}>
+    <section id="about" className={styles.team}>
       <div className={styles.container}>
         <span className={styles.header_text}>{t('Team.headerText')}</span>
         <h2 className={styles.header}>{t('Team.header')}</h2>

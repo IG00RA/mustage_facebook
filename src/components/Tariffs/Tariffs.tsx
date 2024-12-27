@@ -23,10 +23,10 @@ export default function Tariffs() {
             <span className={styles.tariffs_list_item_price}>
               {t(item.price)}
             </span>
-            <button className={styles.button} type="button">
+            <a href={CHAT_URL} className={styles.button}>
               {t('Tariffs.button')}
               <Icon name="icon-right-btn" width={24} height={24} />
-            </button>
+            </a>
             <ul className={styles.tariffs_subList}>
               {Object.entries(item.list).map(([key, value]) =>
                 value ? (

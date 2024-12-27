@@ -6,7 +6,7 @@ import { usePathname, useRouter } from 'next/navigation';
 import styles from './Header.module.css';
 import Icon from '@/helpers/Icon';
 import MobMenu from '../MobMenu/MobMenu';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import LanguageSwitcher from '../LanguageSwitcher/LanguageSwitcher';
 import { menuItems } from '@/data/data';
 import ButtonSec from '../Button/ButtonSec';
@@ -14,14 +14,23 @@ import ButtonSec from '../Button/ButtonSec';
 export default function Header({ locale }: { locale: string }) {
   const pathname = usePathname();
   const router = useRouter();
+  const CHAT_URL = process.env.NEXT_PUBLIC_CHAT_URL || '';
+  const [query, setQuery] = useState<URLSearchParams | null>(null);
 
   const t = useTranslations('');
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const urlSearchParams = new URLSearchParams(window.location.search);
+      setQuery(urlSearchParams);
+    }
+  }, []);
+
   const handleLanguageChange = (lang: string) => {
     const path = pathname.split('/').slice(2).join('/');
-    router.push(`/${lang}/${path}`);
+    router.push(`/${lang}/${path}?${query}`);
   };
 
   const closeMenu = () => {
@@ -38,7 +47,7 @@ export default function Header({ locale }: { locale: string }) {
     <header
       className={`${styles.header} ${isMenuOpen && styles.mobile_menu_open}`}
     >
-      <Link className={styles.logo_wrap} href={`/${locale}/`}>
+      <Link className={styles.logo_wrap} href={`/${locale}/?${query}`}>
         <Icon name="icon-logo" width={40} height={33} />
         <span className={styles.logo_text}>{t('Header.home')}</span>
       </Link>
@@ -56,7 +65,7 @@ export default function Header({ locale }: { locale: string }) {
           locale={locale}
           handleLanguageChange={handleLanguageChange}
         />
-        <ButtonSec />
+        <ButtonSec link={CHAT_URL} />
       </div>
       <div
         className={`${styles.burger_wrap} ${

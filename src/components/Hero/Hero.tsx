@@ -6,6 +6,7 @@ import Icon from '@/helpers/Icon';
 
 export default function Hero() {
   const t = useTranslations();
+  const BOT_URL = process.env.NEXT_PUBLIC_BOT_URL || '';
 
   return (
     <section className={styles.hero}>
@@ -19,7 +20,7 @@ export default function Hero() {
               {t('Hero.text.third')}
             </p>
             <div className={styles.button_wrap}>
-              <Button />
+              <Button link={BOT_URL} />
               <p>{t('Hero.buttonText')}</p>
             </div>
           </div>

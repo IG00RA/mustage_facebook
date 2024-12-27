@@ -2,13 +2,19 @@
 
 import Icon from '@/helpers/Icon';
 import styles from './Form.module.css';
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import { ChangeEvent, FormEvent, useState } from 'react';
+import { toast } from 'react-toastify';
+import { useRouter } from 'next/navigation';
+import { sendMessage, sendToGoogleScript } from '@/api/sendData';
 
 export default function Form() {
   const t = useTranslations();
-
+  const locale = useLocale();
+  const router = useRouter();
   const nicknameRegex = /^@([a-zA-Z0-9_]{3,32})$/;
+
+  const [isLoading, setIsLoading] = useState(false);
 
   const [formData, setFormData] = useState({
     name: '',
@@ -60,10 +66,35 @@ export default function Form() {
     return isValid;
   };
 
-  const handleSubmit = (e: FormEvent<HTMLFormElement>): void => {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>): Promise<void> => {
     e.preventDefault();
-    if (validateForm()) {
-      console.log('Form submitted:', formData);
+    if (!validateForm()) {
+      toast.error(t('Form.errors.validError'));
+      return;
+    }
+
+    try {
+      const message = {
+        message: 'Користувач відправив форму',
+        name: formData.name,
+        username: formData.nickname,
+        phone: formData.phone,
+        bot: false,
+      };
+      setIsLoading(true);
+      await Promise.all([sendToGoogleScript(message), sendMessage(message)]);
+      toast.success(t('Form.form.ok'));
+
+      const currentQueryParams = new URLSearchParams(window.location.search);
+      const queryParams = currentQueryParams.toString();
+
+      router.push(
+        queryParams ? `/${locale}/confirm?${queryParams}` : `/${locale}/confirm`
+      );
+    } catch {
+      toast.error(t('Form.errors.sendError'));
+    } finally {
+      setIsLoading(false);
     }
   };
 
@@ -138,8 +169,13 @@ export default function Form() {
               <p className={styles.error_text}>{errors.nickname}</p>
             )}
           </label>
-
-          <button className={styles.button} type="submit">
+          <span
+            className={`${styles.loader} ${!isLoading ? styles.hidden : ''}`}
+          ></span>
+          <button
+            className={`${isLoading ? styles.hidden : styles.button}`}
+            type="submit"
+          >
             {t('Form.form.button')}
             <Icon name="icon-right-btn" width={24} height={24} />
           </button>
