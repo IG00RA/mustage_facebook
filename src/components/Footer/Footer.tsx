@@ -25,6 +25,7 @@ export default function Footer() {
       setQuery(urlSearchParams);
     }
   }, []);
+
   const handleLanguageChange = (lang: string) => {
     const path = pathname.split('/').slice(2).join('/');
     router.push(`/${lang}/${path}?${query}`);

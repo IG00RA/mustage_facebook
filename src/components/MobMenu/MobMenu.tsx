@@ -21,6 +21,8 @@ export default function MobMenu({
 }: MobMenuProps) {
   const t = useTranslations('');
 
+  const CHAT_URL = process.env.NEXT_PUBLIC_CHAT_URL || '';
+
   return (
     <div
       onClick={closeMenu}
@@ -64,7 +66,7 @@ export default function MobMenu({
         </div>
 
         <div className={styles.button_wrap}>
-          <Button />
+          <Button link={CHAT_URL} />
         </div>
       </div>
     </div>
