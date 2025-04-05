@@ -48,9 +48,9 @@ export default function Tariffs() {
   if (loading || error) {
     return (
       <div className={styles.dots_loading}>
-        <span className={styles.dot}></span>
-        <span className={styles.dot}></span>
-        <span className={styles.dot}></span>
+        <span className={styles.dot_loading}></span>
+        <span className={styles.dot_loading}></span>
+        <span className={styles.dot_loading}></span>
       </div>
     );
   }
