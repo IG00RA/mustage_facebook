@@ -9,16 +9,9 @@ import Button from '../Button/Button';
 type MobMenuProps = {
   isMenuOpen: boolean;
   closeMenu: () => void;
-  locale: string;
-  handleLanguageChange: (lang: string) => void;
 };
 
-export default function MobMenu({
-  isMenuOpen,
-  closeMenu,
-  locale,
-  handleLanguageChange,
-}: MobMenuProps) {
+export default function MobMenu({ isMenuOpen, closeMenu }: MobMenuProps) {
   const t = useTranslations('');
 
   const CHAT_URL = process.env.NEXT_PUBLIC_CHAT_URL || '';
@@ -59,10 +52,7 @@ export default function MobMenu({
         </ul>
 
         <div className={styles.lang_wrap}>
-          <LanguageSwitcher
-            locale={locale}
-            handleLanguageChange={handleLanguageChange}
-          />
+          <LanguageSwitcher />
         </div>
 
         <div className={styles.button_wrap}>

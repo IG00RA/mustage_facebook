@@ -8,7 +8,7 @@ import { getMessages } from 'next-intl/server';
 import { Suspense } from 'react';
 import { FacebookPixel } from '@/components/FacebookPixel/FacebookPixel';
 import { ToastContainer } from 'react-toastify';
-import Header from '@/components/Header/Header';
+import QueryInitializer from '@/components/QueryInitializer/QueryInitializer';
 
 const montserrat = Montserrat({
   subsets: ['latin'],
@@ -24,35 +24,85 @@ const wixMadeforDisplay = Wix_Madefor_Display({
   adjustFontFallback: false,
 });
 
-export const metadata: Metadata = {
-  title: 'Mustage Course',
-  description: 'Mustage Course',
-  icons: {
-    icon: [
-      { url: '/assets/favicon-96x96.png', sizes: '96x96', type: 'image/png' },
-      { url: '/assets/favicon.svg', type: 'image/svg+xml' },
-      { url: '/assets/favicon.ico', type: 'image/x-icon' },
-      { url: '/assets/apple-touch-icon.png', sizes: '180x180' },
-    ],
+const localeMetadata: Record<
+  string,
+  { title: string; description: string; keywords: string }
+> = {
+  uk: {
+    title:
+      'Mustage Study - Навчись заливати рекламу самостійно та керувати бюджетом ефективно',
+    description:
+      'Безкоштовний курс з арбітражу трафіку для власників бізнесу та підприємців. Навчись запускати рекламу на Facebook, контролювати витрати, оцінювати ефективність маркетологів та масштабувати бізнес без зайвих витрат.',
+    keywords:
+      'арбітраж трафіку, навчання рекламі Facebook, залив реклами, арбітраж для бізнесу, контроль рекламного бюджету, автоматизація реклами, гемблінг вертикаль, оптимізація витрат, маркетинг без агентств',
   },
-  manifest: '/assets/site.webmanifest',
-  openGraph: {
-    title: 'Mustage Course',
-    description: 'Mustage Course',
-    type: 'website',
-    images: [
-      {
-        url: '/assets/web-app-manifest-512x512.png',
-        width: 1200,
-        height: 630,
-        alt: 'Mustage Course',
-      },
-    ],
+  ru: {
+    title:
+      'Mustage Study - Научись лить рекламу самостоятельно и эффективно управлять бюджетом',
+    description:
+      'Бесплатный курс по арбитражу трафика для владельцев бизнеса. Запускай рекламу на Facebook, контролируй маркетинг, оценивай эффективность специалистов и масштабируй бизнес без лишних затрат.',
+    keywords:
+      'арбитраж трафика, обучение Facebook Ads, залив рекламы, арбитраж для бизнеса, контроль бюджета, автоматизация рекламы, вертикаль гемблинг, оптимизация расходов, маркетинг без агентств',
   },
-  robots: {
-    index: true,
-    follow: true,
-  },
+};
+
+type Props = {
+  params: Promise<{ locale: string }>;
+};
+
+export const generateMetadata = async ({
+  params,
+}: Props): Promise<Metadata> => {
+  const { locale } = await params;
+  const metadataValues = localeMetadata[locale] || localeMetadata.uk;
+
+  return {
+    metadataBase: new URL(
+      process.env.NEXT_PUBLIC_SITE_URL || 'https://study.mustage.team'
+    ),
+    title: metadataValues.title,
+    description: metadataValues.description,
+    keywords: metadataValues.keywords,
+    robots: {
+      index: true,
+      follow: true,
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: metadataValues.title,
+      description: metadataValues.description,
+      images: [
+        {
+          url: '/assets/opengraph-image.png',
+          width: 1200,
+          height: 630,
+          alt: metadataValues.title,
+        },
+      ],
+    },
+    openGraph: {
+      title: metadataValues.title,
+      description: metadataValues.description,
+      type: 'website',
+      images: [
+        {
+          url: '/assets/opengraph-image.png',
+          width: 1200,
+          height: 630,
+          alt: metadataValues.title,
+        },
+      ],
+    },
+    icons: {
+      icon: [
+        { url: '/assets/favicon-96x96.png', sizes: '96x96', type: 'image/png' },
+        { url: '/assets/favicon.svg', type: 'image/svg+xml' },
+        { url: '/assets/favicon.ico', type: 'image/x-icon' },
+        { url: '/assets/apple-touch-icon.png', sizes: '180x180' },
+      ],
+    },
+    manifest: '/assets/site.webmanifest',
+  };
 };
 
 export default async function RootLayout({
@@ -73,12 +123,13 @@ export default async function RootLayout({
         <body
           className={`${montserrat.variable} ${wixMadeforDisplay.variable}`}
         >
-          <Header locale={locale} />
-          {children}
-          <ToastContainer />
-          <Suspense fallback={null}>
-            <FacebookPixel locale={locale} />
-          </Suspense>
+          <QueryInitializer>
+            {children}
+            <ToastContainer />
+            <Suspense fallback={null}>
+              <FacebookPixel locale={locale} />
+            </Suspense>
+          </QueryInitializer>
         </body>
       </NextIntlClientProvider>
     </html>

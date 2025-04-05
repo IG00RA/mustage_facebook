@@ -6,6 +6,7 @@ import { useTranslations } from 'next-intl';
 import Icon from '@/helpers/Icon';
 import { sendMessage, sendToGoogleScript } from '@/api/sendData';
 import { toast } from 'react-toastify';
+import useStore from '@/store/useStore';
 
 export interface ButtonProps {
   link: string;
@@ -13,9 +14,26 @@ export interface ButtonProps {
 
 const ButtonSec: React.FC<ButtonProps> = ({ link }) => {
   const [isLoading, setIsLoading] = useState(false);
+  const { query } = useStore();
 
   const CHAT_URL = process.env.NEXT_PUBLIC_CHAT_URL || '';
   const t = useTranslations();
+
+  const getRefIdFromQuery = (query: string) => {
+    const params = new URLSearchParams(query);
+    return params.get('ref_id');
+  };
+
+  const constructLink = (baseLink: string) => {
+    if (!query) return baseLink;
+
+    const refId = getRefIdFromQuery(query);
+    if (refId) {
+      const separator = baseLink.includes('?') ? '&' : '?';
+      return `${baseLink}${separator}start=${refId}`;
+    }
+    return baseLink;
+  };
 
   const handleClick = async () => {
     setIsLoading(true);
@@ -23,7 +41,7 @@ const ButtonSec: React.FC<ButtonProps> = ({ link }) => {
 
     try {
       await Promise.all([sendToGoogleScript(message), sendMessage(message)]);
-      window.location.href = link;
+      window.location.href = constructLink(link);
     } catch {
       toast.error(t('Form.errors.sendError'));
     } finally {
