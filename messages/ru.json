@@ -229,6 +229,9 @@
     "policy": "Политика конфиденциальности",
     "menu": {
       "menu": "Меню",
+      "other": "Другое",
+      "payInfo": "Информация об оплате",
+      "payPage": "/payment_info_ru",
       "advantages": "Преимущества",
       "about": "О нас",
       "program": "Программа",

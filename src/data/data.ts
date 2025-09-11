@@ -668,7 +668,7 @@ export const tariffsItems = [
 
 export const tariffsBanks = [
   'icon-privat',
-  'icon-mono',
+  // 'icon-mono',
   'icon-a',
   'icon-credi',
   'icon-bank',

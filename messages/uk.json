@@ -229,6 +229,9 @@
     "policy": "Політика конфіденційності",
     "menu": {
       "menu": "Меню",
+      "other": "Інше",
+      "payInfo": "Інформація про оплату",
+      "payPage": "/payment_info",
       "advantages": "Переваги",
       "about": "Про нас",
       "program": "Програма",

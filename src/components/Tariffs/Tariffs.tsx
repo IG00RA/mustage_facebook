@@ -7,6 +7,10 @@ import Icon from '@/helpers/Icon';
 import { Tariff, TariffItem, fetchData } from '@/api/getTariffs';
 import { useEffect, useState } from 'react';
 import { usePathname } from 'next/navigation';
+import Image from 'next/image';
+import mono from '../../img/tariffs/mono.webp';
+import mono_mob from '../../img/tariffs/mono_mob.webp';
+import Link from 'next/link';
 
 export default function Tariffs() {
   const t = useTranslations();
@@ -100,19 +104,45 @@ export default function Tariffs() {
         })}
       </ul>
 
-      <div className={styles.tariffs_bank_wrap}>
-        <p className={styles.tariffs_bank_text}>
-          {t('Tariffs.bank.first')}
-          {t('Tariffs.bank.second')}
-        </p>
-        <ul className={styles.tariffs_bank_list}>
-          {tariffsBanks.map((item, index) => (
-            <li key={index} className={styles.tariffs_bank_list_item}>
-              <Icon name={item} width={48} height={48} />
-            </li>
-          ))}
-        </ul>
-      </div>
+      <Link
+        className={styles.tariffsBankLink}
+        target="_blank"
+        href={t('Footer.menu.payPage')}
+      >
+        <div className={styles.tariffs_bank_wrap}>
+          <p className={styles.tariffs_bank_text}>
+            {t('Tariffs.bank.first')}
+            {t('Tariffs.bank.second')}
+          </p>
+          <ul className={styles.tariffs_bank_list}>
+            {tariffsBanks.map((item, index) => (
+              <li key={index} className={styles.tariffs_bank_list_item}>
+                <Icon name={item} width={48} height={48} />
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div className={styles.tariffsMono}>
+          <Image
+            className={styles.monoDesc}
+            src={mono}
+            width={0}
+            height={0}
+            sizes="100vw"
+            alt="Monobank image"
+            priority
+          />
+          <Image
+            className={styles.monoMob}
+            src={mono_mob}
+            width={0}
+            height={0}
+            sizes="100vw"
+            alt="Monobank image"
+            priority
+          />
+        </div>
+      </Link>
     </section>
   );
 }
